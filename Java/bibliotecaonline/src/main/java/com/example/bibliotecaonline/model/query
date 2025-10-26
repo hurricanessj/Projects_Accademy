@@ -1,0 +1,43 @@
+1) Scrivi una query SQL che restituisce tutti i prestiti con:
+nome dell’utente
+titolo del libro
+2)Definisci:
+PK su Utente.id, Libro.id, Prestito.id
+FK su Prestito.utente_id → Utente.id
+FK su Prestito.libro_id → Libro.id
+3)Aggiungi un indice su Utente.email.
+
+create table Utente(
+id int auto_increment primary key,
+varchar(20) nomeUtente not null,
+varchar(40) email not null
+);
+
+create table Libro(
+id int auto_increment primary key,
+varchar(30) titolo not null,
+varchar(20) autore not null,
+varchar(50) isbn not null
+);
+
+crate table Prestito(
+id int auto_increment primary key,
+varchar(30) dataInizio not null,
+varchar(30) dataFine not null,
+fk_prestito_utente foreign key (utente_id) references utente(id),
+fk prestito_libro foreign key (libro_id) references libro(id),
+);
+
+create index inx_utente_email on Utente(email);
+
+select
+p.id AS prestito_id,
+u.nomeUtente AS nome_utente,
+l.titolo AS titolo_libro,
+p.dataInizio,
+p.dataFine
+From Prestito p
+JOIN Utente u ON p.utente_id = u.id
+JOIN libro l on p.libro_id = l.id;
+
+
