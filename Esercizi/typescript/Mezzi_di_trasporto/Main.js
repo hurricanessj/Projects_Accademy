@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var GenericGarage_1 = require("./GenericGarage");
+var Auto_1 = require("./Auto");
+var auto1 = new Auto_1.Auto("Clio", 180, 3);
+var garage = new GenericGarage_1.GenericGarage();
+garage.setContenuto(auto1);
+garage.aggiungi(auto1);
+garage.aggiungi(new Auto_1.Auto("Panda", 160, 5));
+console.log(garage.info());
+console.log("auto nel garage", garage.getElementi());

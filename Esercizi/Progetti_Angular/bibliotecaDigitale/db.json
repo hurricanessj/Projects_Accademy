@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "AdminMaster",
+      "email": "admin@biblioteca.com",
+      "password": "admin123",
+      "role": "admin",
+      "isOnline": true
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "email": "user1@biblioteca.com",
+      "password": "user123",
+      "role": "user",
+      "isOnline": false
+    },
+    {
+      "id": "3",
+      "username": "LettoreDue",
+      "email": "user2@biblioteca.com",
+      "password": "user456",
+      "role": "user",
+      "isOnline": false
+    }
+  ],
+  "books": [
+    {
+      "id": "1",
+      "title": "Il Nome della Rosa",
+      "author": "Umberto Eco",
+      "description": "Un giallo medievale intriso di mistero e filosofia.",
+      "available": true
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "description": "Distopia politica in un regime totalitario.",
+      "available": true
+    },
+    {
+      "id": "3",
+      "title": "Il Signore degli Anelli",
+      "author": "J.R.R. Tolkien",
+      "description": "L'epica battaglia per la Terra di Mezzo.",
+      "available": false
+    },
+    {
+      "id": "6527",
+      "title": "modifica",
+      "description": "fdgdfgd",
+      "author": "dfgdgd"
+    }
+  ]
+}

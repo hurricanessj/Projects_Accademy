@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*Data una parola e un numero, stampa quella parola ripetuta N volte.
+    Data una temperatura in °C converti in °F con la formula:
+    F = (C × 9/5) + 32
+    Data una parola stampa la stessa parola al contrario. (utilizzare un array)*/
+
+    //esercizio 1
+    var numero = 10;
+    var parola = "ciao";
+
+    for(var i = 0; i< numero; i++){
+        console.log(parola);
+    }
+
+    //esercizio 2
+    function conversione(temperaturaInGradi){
+       var temperaturaInFarenheit = (temperaturaInGradi * 9 / 5) + 32;
+        console.log("la temperatura è: "+ temperaturaInFarenheit);
+    }
+
+    console.log(conversione(22));
+
+    //esercizio 3
+
+    var unArrayDiCaratteri = ['p', 'a', 'r', 'o', 'l', 'a'];
+
+    for(var i= unArrayDiCaratteri.length-1; i>=0; i--){
+        console.log(unArrayDiCaratteri[i]);
+    }
+
+</script>
+
+</html>

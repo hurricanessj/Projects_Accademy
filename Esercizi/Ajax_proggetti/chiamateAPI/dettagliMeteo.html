@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meteo Città</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Meteo Attuale</h1>
+    <p><strong>Città:</strong> <span id="nomeCitta"></span></p>
+    <p><strong>Temperatura:</strong> <span id="temperatura"></span> °C</p>
+    <p><strong>Descrizione:</strong> <span id="descrizione"></span></p>
+    <p><strong>Umidità:</strong> <span id="umidita"></span>%</p>
+
+    <script>
+        $(document).ready(function () {
+            const params = new URLSearchParams(window.location.search);
+            const citta = params.get("citta");
+
+            $("#nomeCitta").text(citta);
+
+            $.ajax({
+
+                url: `https://wttr.in/${citta}?format=j1`,
+                method: "GET",
+                success: function (dati) {
+                    const meteo = dati.current_condition[0];
+                    $("#temperatura").text(meteo.temp_C);
+                    $("#descrizione").text(meteo.weatherDesc[0].value);
+                    $("#umidita").text(meteo.humidity);
+                },
+                error: function () {
+                    alert("errore nel recupero dei dati meteo.");
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

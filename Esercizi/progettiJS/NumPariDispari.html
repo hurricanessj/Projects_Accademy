@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controllo Numero</title>
+</head>
+<body>
+<label for="tipoNumero">Inserisci un numero:</label>
+<input type="text" id="tipoNumero" required>
+<button onclick="controllaNumero()">Controlla</button>
+ 
+    <script>
+        function controllaNumero() {
+            let valore = document.getElementById("tipoNumero").value;
+            let numero = parseInt(valore);
+            if (numero % 2 === 0) {
+                alert("Il numero è pari");
+            } else {
+                alert("Il numero è dispari");
+            }
+        }
+</script>
+</body>
+</html>

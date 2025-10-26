@@ -1,0 +1,35 @@
+<!--<mat-card *ngIf="opera" class="mt-4">
+  <mat-card-title>Dettagli: {{ opera.titolo }}</mat-card-title>
+  <mat-card-content>
+    <p><strong>Autore:</strong> {{ opera.autore }}</p>
+    <p><strong>Stanza:</strong> {{ opera.stanza }}</p>
+    <p><strong>Origine:</strong> {{ opera.paeseOrigine }}</p>
+    <p><strong>Data:</strong> {{ opera.dataRealizzazione }}</p>
+    <p><strong>Stato:</strong> {{ opera.stato }}</p>
+  </mat-card-content>
+    <mat-card-actions>
+    <button mat-stroked-button color="warn" (click)="onChiudi()">Chiudi</button>
+  </mat-card-actions>
+</mat-card>
+-->
+
+<div class="container mt-4" *ngIf="opera">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h3 class="card-title">Dettagli: {{ opera.titolo }}</h3>
+            <img [src]="'assets/images/' + opera.immagine" class="card-img-top" alt="{{ opera.titolo }}"
+                style="width: 100%; max-height: 200px; object-fit: contain; background-color: #f8f9fa;">
+            <p class="card-text"><strong>Autore:</strong> {{ opera.autore }}</p>
+            <p class="card-text"><strong>Stanza:</strong> {{ opera.stanza }}</p>
+            <p class="card-text"><strong>Origine:</strong> {{ opera.paeseOrigine }}</p>
+            <p class="card-text"><strong>Data:</strong> {{ opera.dataRealizzazione }}</p>
+            <p class="card-text"><strong>Stato:</strong> {{ opera.stato }}</p>
+            <p class="mt-3 text-muted">
+                <strong>Descrizione:</strong><br>{{opera.descrizione}}
+            </p>
+        </div>
+        <div id="footerColor" class="card-footer text-end">
+            <button class="btn btn-info" (click)="onChiudi()">Chiudi</button>
+        </div>
+    </div>
+</div>

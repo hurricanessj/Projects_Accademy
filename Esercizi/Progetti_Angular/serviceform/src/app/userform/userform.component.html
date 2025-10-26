@@ -1,0 +1,7 @@
+{{form.value|json}}
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="nome" required>
+    <input type="email" formControlName="email" required>
+    <button type="submit"> {{form.value.id ? 'update' : 'add'}} User</button>
+    <button type="button" *ngIf="form.value.id" (click)="resetForm()">cancel</button>
+</form>

@@ -1,0 +1,6 @@
+<h1>libri prestati</h1>
+<ul>
+    <li *ngFor="let prod of libro">{{prod.name}}</li>
+</ul>
+<p *ngIf="libro.length==0">carrello vuoto</p>
+<button (click)="pulisci()">svuota carrello</button>

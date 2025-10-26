@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <select>
+
+    </select>
+    <p id="paragrafo"></p>
+
+    <script>
+        $(document).ready(function () {
+            $.get("https://comuni-istat-api.belicedigital.com/api/comuni", function (response) {
+                response.forEach(element => {
+
+                    $("select").append(`<option value="${element}">${element} </option>`)
+                });
+                $("select").on("change", function () {
+                    $("#paragrafo").empty();
+
+                    $("#paragrafo").append(`hai selezionato: ${this.value}`)
+                })
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

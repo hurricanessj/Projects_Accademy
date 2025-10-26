@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Libro_1 = require("./Libro");
+var Articolo_1 = require("./Articolo");
+var GenericArchivio_1 = require("./GenericArchivio");
+var libro = new Libro_1.Libro("1984", "George Orwell", 328);
+var archivioLibri = new GenericArchivio_1.GenericArchivio();
+var articolo = new Articolo_1.Articolo("Tecnologie Future", "Maria Rossi", "Tech Magazine");
+var archivioArticoli = new GenericArchivio_1.GenericArchivio();
+archivioLibri.setContenuto(libro);
+console.log(archivioLibri.info());
+archivioArticoli.setContenuto(articolo);
+console.log(archivioArticoli.info());

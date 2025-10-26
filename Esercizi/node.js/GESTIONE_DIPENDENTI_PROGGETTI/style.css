@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(200deg, #7aefff, #ffffffcd);
+}
+
+#secondBody {
+    background: linear-gradient(135deg,
+            var(--bs-info),
+            var(--bs-success),
+            var(--bs-warning),
+            var(--bs-danger));
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+
+
+#hd {
+    height: 450px;
+    background-image: url('imgPage.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+
+#hdnx {
+    height: 100px;
+}
+
+#headerDescription {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 30px;
+}
+
+#cardDescr {
+    background-color:		#f5f5dc;
+}
+
+#cardAttivita {
+    background-color: #c1121f;
+}
+
+#contatti{
+        background-color: #2d383b;
+}
+

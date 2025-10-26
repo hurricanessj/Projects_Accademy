@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "f0fb",
+      "nome": "Gaetano",
+      "cognome": "Esposito"
+    },
+    {
+      "id": "835b",
+      "nome": "Emiliano",
+      "cognome": "Rudolf"
+    },
+    {
+      "id": "19ef",
+      "nome": "Francesco",
+      "cognome": "Maria"
+    },
+    {
+      "id": "6b8a",
+      "nome": "Davide",
+      "cognome": "Rubinacci"
+    }
+  ]
+}

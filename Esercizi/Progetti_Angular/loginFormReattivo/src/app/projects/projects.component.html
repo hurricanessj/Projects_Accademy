@@ -1,0 +1,21 @@
+<app-formprogetto (save)="saveProject($event)" [prog]="selectedProg"></app-formprogetto>
+<div class="projects-container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let pgl of projectList">
+      <div class="card project-card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title text-success">{{ pgl.titolo }}</h4>
+          <p class="card-text">{{ pgl.descrizione }}</p>
+          <p class="card-text">
+            <strong>Deadline: </strong> {{ pgl.deadline }}
+          </p>
+          <br>
+          <div *ngIf="authService.getRole() == 'admin'" class="d-flex gap-2">
+            <button class="btn btn-outline-success btn-sm" (click)="editProg(pgl)">Modifica</button>
+            <button class="btn btn-outline-danger btn-sm" (click)="deleteProg(pgl.id)">Elimina</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bandiera Italiana</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="bandiera" width="300" height="200" onclick="">
+        </canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById("bandiera");
+        const ctx = canvas.getContext("2d");
+
+        const larghezzaRettangolo = canvas.width / 3;
+
+        // Verde (sinistra)
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, larghezzaRettangolo, canvas.height);
+
+        // Bianco (centro)
+        ctx.fillStyle = "white";
+        ctx.fillRect(larghezzaRettangolo, 0, larghezzaRettangolo, canvas.height);
+
+        // Rosso (destra)
+        ctx.fillStyle = "red";
+        ctx.fillRect(larghezzaRettangolo * 2, 0, larghezzaRettangolo, canvas.height);
+
+    </script>
+</body>
+
+</html>
+
+

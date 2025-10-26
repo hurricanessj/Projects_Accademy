@@ -1,0 +1,6 @@
+creare un ws-rest che consenta di esporre le seguenti api:
+get di tutti gli iscritti
+post nuovo corso
+ricerca corso per nome
+
+creare un'applicazione web che consenta di visualizzare una tabella di iscritti, creare un corso, ricercare un corso in base al nome

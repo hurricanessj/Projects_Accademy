@@ -1,0 +1,79 @@
+<!--<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <app-formopere (save)="saveOpera($event)" [opera]="selectedOpera"></app-formopere>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6 mb-4" *ngFor="let op of listaOpere">
+            <mat-card class="h-100">
+                <mat-card-title>{{ op.titolo }}</mat-card-title>
+                <mat-card-content>
+                    <p>{{ op.autore }}</p>
+                    <p><strong>Stanza:</strong> {{ op.stanza }}</p>
+                    <p><strong>Origine:</strong> {{ op.paeseOrigine }}</p>
+                    <p><strong>Data:</strong> {{ op.dataRealizzazione }}</p>
+                    <p><strong>Stato:</strong>
+                        <span [ngStyle]="{ color: op.stato == 'esposta' ? 'green' : 'orange' }">
+                            {{ op.stato }}
+                        </span>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" (click)="editOpera(op)">Modifica</button>
+                    <button mat-flat-button color="warn" (click)="deleteOpera(op.id)">Elimina</button>
+                    <button mat-flat-button color="accent" (click)="mostraDettagli(op)">Dettagli</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+
+    <app-dettagli-opera *ngIf="dettagliOpera" [opera]="dettagliOpera" (chiudiDettagli)="dettagliOpera = null"></app-dettagli-opera>
+
+-->
+<div id="bodyColor">
+
+    <header id="header" class="py-4 mb-4 shadow-sm">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <h1 class="h3 mb-0">Opere Virtuali</h1>
+        </div>
+    </header>
+    <div class="container mt-4">
+
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let op of listaOpere">
+                <div class="card h-100 shadow-sm">
+
+                    <img [src]="'assets/images/' + op.immagine" class="card-img-top" alt="{{ op.titolo }}"   style="width: 100%; max-height: 200px; object-fit: contain; background-color: #f8f9fa;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ op.titolo }}</h5>
+                        <p class="card-text"><strong>Autore:</strong> {{ op.autore }}</p>
+                        <p class="card-text">
+                            <strong>Stato:</strong>
+                            <span [ngClass]="{'text-success': op.stato == 'esposta','text-danger': op.stato == 'in restauro'}">{{ op.stato }}</span>
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-primary" (click)="editOpera(op)">Modifica</button>
+                        <button class="btn btn-sm btn-outline-danger" (click)="deleteOpera(op.id)">Elimina</button>
+                        <button class="btn btn-sm btn-outline-secondary" (click)="mostraDettagli(op)">Dettagli</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <app-dettagli-opera *ngIf="dettagliOpera" [opera]="dettagliOpera" (chiudiDettagli)="dettagliOpera = null"></app-dettagli-opera>
+            </div>
+        </div>
+        <div class="row mb-4 mt-2">
+            <div class="col-12">
+                <app-formopere (save)="saveOpera($event)" [opera]="selectedOpera"></app-formopere>
+            </div>
+        </div>
+    </div>
+</div>

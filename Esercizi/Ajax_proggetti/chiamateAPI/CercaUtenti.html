@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cerca utenti</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        <div class="row justify-content-center">
+            <div class="col-3  justify-content-center">
+                <h1>Utenti Scuola</h1>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button id="caricaDati" type="button" class="btn btn-info">visualizza tutti gli utenti</button>
+                    <ul id="listaUtenti">
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <button id="vediStudenti" type="button" class="btn btn-info">visualizza studenti</button>
+                    <ul id="listaStudenti">
+                    </ul>
+                </div>
+                <div class="col-2" id="visNumDoc">
+                    <button id="numDoc" type="button" class="btn btn-info">mumero docenti</button>
+                </div>
+                <div class="col-5" id="visEmail">
+                    <input type="text" id="inEmail" placeholder="Cerca per email">
+                    <button id="cercaPerEmail" type="button" class="btn btn-info">cerca</button>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+
+                    $("#caricaDati").on("click", function () {
+
+                        $.ajax({
+                            url: "listaUtenti.json",
+                            method: "GET",
+                            success: function (data) {
+                                $("#listaUtenti").empty();
+                                console.log(data)
+
+                                data.listaUtenti.forEach(user => {
+                                    $("#listaUtenti").append(`<li${user.nome}>${user.nome}</li><br>`)
+                                });
+
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+
+                    });
+
+                    $("#vediStudenti").on("click", function () {
+                        $.ajax({
+                            url: "listaUtenti.json",
+                            method: "GET",
+                            success: function (data) {
+                                $("#listaStudenti").empty();
+                                console.log(data);
+
+                                data.listaUtenti.forEach(user => {
+                                    if (user.ruolo === "studente") {
+                                        $("#listaStudenti").append(`<li>${user.nome}</li><br>`);
+                                    }
+                                });
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+                    });
+
+                    $("#numDoc").on("click", function () {
+                        $.ajax({
+                            url: "listaUtenti.json",
+                            method: "GET",
+                            success: function (data) {
+                                console.log(data);
+
+                                const docenti = data.listaUtenti.filter(user => user.ruolo === "docente");
+
+                                $("#parDoc").remove();
+
+                                $("#visNumDoc").append(`<p id="parDoc">Numero docenti: ${docenti.length}</p>`);
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+                    });
+
+
+                    $("#cercaPerEmail").on("click", function () {
+                        $.ajax({
+                            url: "listaUtenti.json",
+                            method: "GET",
+                            success: function (data) {
+                                const inEmail = document.getElementById("inEmail").value;
+
+                                const utentePerEmail = data.listaUtenti.filter(user => user.email === inEmail);
+
+                                const utente = utentePerEmail[0];
+
+                                $("#parEmail").remove();
+
+                                if (utente) {
+                                    $("#visEmail").append(`<p id="parEmail">Nome utente: ${utente.nome}</p>`);
+                                } else {
+                                    $("#visEmail").append(`<p id="parEmail">Nessun utente trovato con questa email.</p>`);
+                                }
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+                    });
+
+                });
+            </script>
+        </div>
+</body>
+
+</html>

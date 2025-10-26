@@ -1,0 +1,28 @@
+{
+  "ricette": [
+    {
+      "immagine": "imgPastaAlPomodoro.jpg",
+      "nome": "Pasta al Pomodoro",
+      "ingrediente_principale": "Pomodori",
+      "procedimento": "Cuoci la pasta. In una padella soffriggi aglio e olio, aggiungi i pomodori pelati e lascia cuocere per 15 minuti. Unisci la pasta al sugo e mescola bene."
+    },
+    {
+      "immagine": "imgPolloCurry.jpg",
+      "nome": "Pollo al Curry",
+      "ingrediente_principale": "Pollo",
+      "procedimento": "Taglia il pollo a pezzi, rosolalo in padella con cipolla, aggiungi curry, latte di cocco e lascia cuocere per 30 minuti a fuoco medio."
+    },
+    {
+      "immagine": "imgLenticchie.jpg",
+      "nome": "Zuppa di Lenticchie",
+      "ingrediente_principale": "Lenticchie",
+      "procedimento": "Soffriggi sedano, carota e cipolla. Aggiungi le lenticchie e brodo vegetale. Cuoci a fuoco basso per 40 minuti e frulla se desideri una consistenza cremosa."
+    },
+    {
+      "immagine": "imgRisotto.jpg",
+      "nome": "Risotto ai Funghi",
+      "ingrediente_principale": "Funghi",
+      "procedimento": "Soffriggi cipolla e aggiungi i funghi. Unisci il riso e sfuma con vino bianco. Aggiungi brodo poco per volta fino a cottura ultimata. Manteca con burro e parmigiano."
+    }
+  ]
+}

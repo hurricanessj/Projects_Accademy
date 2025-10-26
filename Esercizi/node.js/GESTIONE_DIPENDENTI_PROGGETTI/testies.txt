@@ -1,0 +1,7 @@
+creare un database per la gestione dei dipendenti e progetti.
+Ogni dipendente partecipa a un solo progetto e un progetto ha più dipendenti.
+In Stabilisci anche i ruoli e realizza un'applicazione BE e FE che 
+
+- dato un progetto permetta di assegnare un solo PM e 3 sviluppatori
+- dato un progetto visualizza i partecipanti e i dettagli del progetto
+- dato un dipendente visualizza il progetto a cui partecipa

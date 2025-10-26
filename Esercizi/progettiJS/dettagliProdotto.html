@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Prodotto</title>
+</head>
+
+<body>
+
+    <h1>dettagli prodotto</h1>
+
+    <label for="nome">nome</label>
+    <span id="nome"></span>
+    <label for="prezzo">prezzo</label>
+    <span id="prezzo"></span>
+    <label for="immagine">immagine</label>
+    <span id="img"></span>
+
+
+
+    <script>
+        function getParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+ 
+        const name = getParameter('nome');
+        console.log(name)
+
+       var listap= JSON.parse(localStorage.getItem("prodotti"))
+       
+
+     var prod= listap.find(prodotti => prodotti.nome==name)
+     document.getElementById("nome").innerHTML=prod.nome
+      console.log(listap)
+</script>
+</body>
+
+</html>
+
+ 

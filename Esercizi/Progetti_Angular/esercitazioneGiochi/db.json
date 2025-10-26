@@ -1,0 +1,102 @@
+{
+    "videogiochi": [
+        {
+            "id": 1,
+            "nome": "The Witcher 3: Wild Hunt",
+            "genere": "RPG",
+            "piattaforma": "PC",
+            "dataRilascio": "2015-05-19T00:00:00.000Z"
+        },
+        {
+            "id": 2,
+            "nome": "God of War",
+            "genere": "Azione",
+            "piattaforma": "PlayStation",
+            "dataRilascio": "2018-04-20T00:00:00.000Z"
+        },
+        {
+            "id": 3,
+            "nome": "Halo Infinite",
+            "genere": "FPS",
+            "piattaforma": "Xbox",
+            "dataRilascio": "2021-12-08T00:00:00.000Z"
+        },
+        {
+            "id": 4,
+            "nome": "Animal Crossing: New Horizons",
+            "genere": "Simulazione",
+            "piattaforma": "Nintendo Switch",
+            "dataRilascio": "2020-03-20T00:00:00.000Z"
+        },
+        {
+            "id": 5,
+            "nome": "Cyberpunk 2077",
+            "genere": "RPG",
+            "piattaforma": "PC",
+            "dataRilascio": "2020-12-10T00:00:00.000Z"
+        },
+        {
+            "id": 6,
+            "nome": "Forza Horizon 5",
+            "genere": "Corse",
+            "piattaforma": "Xbox",
+            "dataRilascio": "2021-11-09T00:00:00.000Z"
+        },
+        {
+            "id": 7,
+            "nome": "Hades",
+            "genere": "Rogue-like",
+            "piattaforma": "PC",
+            "dataRilascio": "2020-09-17T00:00:00.000Z"
+        },
+        {
+            "id": 8,
+            "nome": "Super Mario Odyssey",
+            "genere": "Platform",
+            "piattaforma": "Nintendo Switch",
+            "dataRilascio": "2017-10-27T00:00:00.000Z"
+        },
+        {
+            "id": 9,
+            "nome": "The Legend of Zelda: Breath of the Wild",
+            "genere": "Azione-Avventura",
+            "piattaforma": "Nintendo Switch",
+            "dataRilascio": "2017-03-03T00:00:00.000Z"
+        },
+        {
+            "id": 10,
+            "nome": "Call of Duty: Modern Warfare",
+            "genere": "FPS",
+            "piattaforma": "PC",
+            "dataRilascio": "2019-10-25T00:00:00.000Z"
+        },
+        {
+            "id": 11,
+            "nome": "Minecraft",
+            "genere": "Sandbox",
+            "piattaforma": "PC",
+            "dataRilascio": "2011-11-18T00:00:00.000Z"
+        },
+        {
+            "id": 12,
+            "nome": "Dark Souls III",
+            "genere": "RPG",
+            "piattaforma": "PlayStation",
+            "dataRilascio": "2016-04-12T00:00:00.000Z"
+        },
+        {
+            "id": 13,
+            "nome": "Fortnite",
+            "genere": "Battle Royale",
+            "piattaforma": "PC",
+            "dataRilascio": "2017-07-25T00:00:00.000Z"
+        },
+        {
+            "id": 14,
+            "nome": "Resident Evil Village",
+            "genere": "Horror",
+            "piattaforma": "PlayStation",
+            "dataRilascio": "2021-05-07T00:00:00.000Z"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function saluta(n) {
+            if (n == 0)
+                return;
+            console.log("ciao")
+            saluta(n - 1)   //dal valore di n fino a zero
+        }
+
+        saluta(5);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+
+
+<a *ngIf="!authService.getIsLoggedIn()" routerLink="/login" routerLinkActive="underline">Login</a>
+<a *ngIf="authService.getRole() == 'user' " routerLink="/user">Area utente</a>
+<a *ngIf="authService.getRole() == 'admin' " routerLink="/admin">Area admin</a>
+<button *ngIf="authService.getIsLoggedIn()" (click)="authService.logout(); router.navigate(['/login'])" >Logout</button>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Negozio</h1>
+
+    <select id="listaProd"></select>
+    <option value="0">seleziona un valore</option>
+    <select id="modello"></select>
+
+
+
+    <script>
+    var prodotti = [
+        {nome:"computer", prezzo:"200", immagine:"imgAmalfi.jpg", modello: ["acer","asus"]},
+        {nome:"cellulare", prezzo:"300", immagine:"imgNapoli.jpg", modello: ["samsung", "vivobook"]},
+        {nome:"stampante", prezzo:"50", immagine:"imgErcolano.jpg", modello:["hp","apple"] },
+    ]
+
+    var lista = document.getElementById("listaProd");
+    prodotti.forEach(element => {
+        lista.innerHTML += `<option value = "${element.nome}">${element.nome}</option>`
+    });
+    lista.addEventListener('change', function(){
+        popoloLaCombo(this.value);
+        localStorage.setItem("prodotti", JSON.stringify(prodotti));
+
+    })
+
+    function popoloLaCombo(nome){
+    var prod = prodotti.find( prodotto =>prodotto.nome == nome)
+
+    var mod = document.getElementById("modello")
+
+        mod.innerHTML=""
+        
+     prod.modello.forEach(element => {
+        mod.innerHTML += `<option value = "${element}">${element}</option>`
+    });
+    }
+    </script>
+</body>
+</html>

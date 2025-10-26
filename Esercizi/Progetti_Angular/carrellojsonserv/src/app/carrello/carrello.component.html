@@ -1,0 +1,6 @@
+<h1>Carrello</h1>
+<ul>
+    <li *ngFor="let prod of carello">{{prod.name}} - {{prod.price}}</li>
+</ul>
+<p *ngIf="carello.length==0">carrello vuoto</p>
+<button (click)="pulisci()">svuota carrello</button>

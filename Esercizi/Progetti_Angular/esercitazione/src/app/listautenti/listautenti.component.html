@@ -1,0 +1,12 @@
+<ul>
+    <li (click)="visualizzaEta(u.age)" *ngFor="let u of utentiFiglio">{{u.nome}}-{{u.cognome}}</li>
+    
+</ul>
+<p *ngIf="utentiFiglio.length > 2 ; else stampaAltro ">utenti superiori a 2</p>
+
+<ng-template #stampaAltro>
+
+    <p>utenti inferiori a 2</p>
+</ng-template>
+
+<button (click)="passaPadre()">passa al padre utenti</button>

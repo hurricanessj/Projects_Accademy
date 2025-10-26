@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(200deg, #ffdd005d, #ffa200cd);
+}
+
+#secondBody {
+    background: linear-gradient(135deg,
+            var(--bs-info),
+            var(--bs-success),
+            var(--bs-warning),
+            var(--bs-danger));
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+
+
+#hd {
+    height: 300px;
+    background-image: url('imgCampo\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#hdnx {
+    height: 100px;
+}
+
+#headerDescription {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 30px;
+}
+
+#cardDescr {
+    background-color: #ffb703;
+}
+
+#cardAttivita {
+    background-color: #c1121f;
+}
+
+
+.gallery-img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}

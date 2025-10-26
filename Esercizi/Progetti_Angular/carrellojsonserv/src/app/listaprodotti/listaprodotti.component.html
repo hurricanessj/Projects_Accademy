@@ -1,0 +1,5 @@
+<h2>Prodotti</h2>
+<ul>
+    <li *ngFor="let prod of prodotti">{{prod.name}} - {{prod.price}} <button
+            (click)="addToChart(prod)">aggiungi</button></li>
+</ul>

@@ -1,0 +1,85 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Il nome della rosa",
+      "author": "Umberto Eco",
+      "year": 1980,
+      "genre": "Giallo storico",
+      "description": "Un frate francescano indaga su una serie di omicidi in un monastero medievale.",
+      "favorite": false
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "genre": "Distopia",
+      "description": "Un regime totalitario controlla ogni aspetto della vita in un futuro opprimente.",
+      "favorite": true
+    },
+    {
+      "id": 3,
+      "title": "Sapiens: Da animali a dèi",
+      "author": "Yuval Noah Harari",
+      "year": 2011,
+      "genre": "Saggistica",
+      "description": "Un viaggio nella storia dell’umanità, dall’Homo sapiens alla società moderna.",
+      "favorite": false
+    },
+    {
+      "id": 4,
+      "title": "Il Gattopardo",
+      "author": "Giuseppe Tomasi di Lampedusa",
+      "year": 1958,
+      "genre": "Romanzo storico",
+      "description": "Le vicende di una nobile famiglia siciliana durante il Risorgimento.",
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "title": "La coscienza di Zeno",
+      "author": "Italo Svevo",
+      "year": 1923,
+      "genre": "Romanzo psicologico",
+      "description": "Zeno Cosini racconta la sua vita e le sue nevrosi attraverso un diario terapeutico.",
+      "favorite": true
+    },
+    {
+      "id": 6,
+      "title": "Il piccolo principe",
+      "author": "Antoine de Saint-Exupéry",
+      "year": 1943,
+      "genre": "Fiaba filosofica",
+      "description": "Un pilota incontra un piccolo principe da un altro pianeta che gli insegna il valore dell’amicizia.",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "title": "Orgoglio e pregiudizio",
+      "author": "Jane Austen",
+      "year": 1813,
+      "genre": "Romanzo romantico",
+      "description": "Le complicate relazioni amorose e sociali nell’Inghilterra del XIX secolo.",
+      "favorite": true
+    },
+    {
+      "id": 8,
+      "title": "Il signore degli anelli",
+      "author": "J.R.R. Tolkien",
+      "year": 1954,
+      "genre": "Fantasy epico",
+      "description": "Un viaggio per distruggere un anello malvagio che minaccia il mondo.",
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "year": 1953,
+      "genre": "Distopia",
+      "description": "In un futuro dove i libri sono vietati, un pompiere inizia a dubitare del sistema.",
+      "favorite": false
+    }
+  ]
+}

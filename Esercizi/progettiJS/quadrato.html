@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Quadrato Colorato</title>
+  <style>
+    #quadrato {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      border: 2px solid #000;
+    }
+ 
+    table {
+      border-collapse: collapse;
+      width: 300px;
+    }
+ 
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+    }
+ 
+    select {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>Quadrato del colore selezionato</h1>
+ 
+  <label for="colore">Modifica colore:</label>
+  <select id="colore">
+    <option value="red">Rosso</option>
+    <option value="blue">Blu</option>
+    <option value="green">Verde</option>
+    <option value="yellow">Giallo</option>
+    <option value="purple">Viola</option>
+  </select>
+ 
+  <div id="quadrato"></div>
+ 
+  <h2>Dati utente</h2>
+  <table>
+    <tr><th>Nome</th><td id="nome"></td></tr>
+    <tr><th>Email</th><td id="email"></td></tr>
+  </table>
+ 
+  <script>
+
+    const colore = localStorage.getItem("colore");
+    const nome = sessionStorage.getItem("nome");
+    const email = sessionStorage.getItem("email");
+
+
+    const quadrato = document.getElementById("quadrato");
+    quadrato.style.backgroundColor = colore;
+ 
+
+    const selettore = document.getElementById("colore");
+    selettore.value = colore;
+
+    selettore.addEventListener("change", function () {
+      quadrato.style.backgroundColor = this.value;
+      localStorage.setItem("colore", this.value);
+    });
+ 
+    document.getElementById("nome").textContent = nome;
+    document.getElementById("email").textContent = email;
+  </script>
+</body>
+</html>

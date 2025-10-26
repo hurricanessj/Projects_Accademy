@@ -1,0 +1,7 @@
+<h2>{{selectedStudent ? 'modifica' : 'nuovo'}}</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <input type="text" formControlName="name">
+    <input type="number" formControlName="age">
+    <input type="text" formControlName="class">
+    <button type="submit">{{selectedStudent ? 'salva': 'aggiungi'}}</button>
+</form>

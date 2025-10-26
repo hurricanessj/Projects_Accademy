@@ -1,0 +1,47 @@
+<h1>Itinerari Viaggi</h1>
+<div class="row">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="card mt-5">
+    <div class="card-body">
+        <form [formGroup]="userForm" (ngSubmit)="invia()">
+            <div class="mb-3">
+                <label><h4>Nome:</h4></label>
+                <input type="text" class="form-control" formControlName="firstName" placeholder="Inserisci Nome">
+                <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched">
+                    Inserisci almeno 3 caratteri
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label><h4>Email:</h4></label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Inserisci Email">
+            </div>
+            
+            <div class="mb-3">
+                <label><h4>Meta:</h4></label>
+                <select class="form-select" formControlName="meta">
+                    <option value="">-- Seleziona una meta --</option>
+                    <option *ngFor="let meta of mete" [value]="meta.id">
+                        {{ meta.nome }} - €{{ meta.costoBase }}
+                    </option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label><h4>Numero Di Persone:</h4></label>
+                <input type="number" class="form-control" formControlName="numeroPersone" min="1">
+                <div *ngIf="userForm.get('numeroPersone')?.invalid && userForm.get('numeroPersone')?.touched">
+                    Inserisci un numero valido (maggiore 0)
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-info" [disabled]="userForm.invalid">
+                Invia
+            </button>
+      </form>
+    </div>
+</div>
+</div>
+
+
+</div>

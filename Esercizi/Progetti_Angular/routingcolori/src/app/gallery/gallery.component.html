@@ -1,0 +1,8 @@
+<div class="wrapper p-3 rounded">
+  <h3>Galleria</h3>
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let img of [1,2,3]">
+      <img [src]="'https://via.placeholder.com/150?text=Immagine+'+img" class="img-fluid">
+    </div>
+  </div>
+</div>

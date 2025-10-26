@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .rosso{
+        background-color: red;
+        border: 2px black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+    }
+    .blue{
+        background-color: blue;
+        border: 2px black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+    }
+    div{
+        height: 40px;
+    }
+</style>
+<body>
+ 
+  <ul id="list"></ul>
+  
+ 
+  <br>
+ 
+  <div id="p1" data-id="rosso" >a</div>
+  <div id="p2" data-id="blu">a</div>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script>
+ 
+        var links =  ["https://gaetanoesposito.altervista.org/","https://www.w3schools.com/jquery/jquery_dom_add.asp", "https://uiverse.io/"]
+ 
+ 
+        $(document).ready(function(){
+            links.forEach(link =>{
+                $("#list").append(`<li><a href="${link}">${link}</a></li>`)
+            })
+ 
+ 
+            $("div").on('click', function(){
+                if($(this).attr("data-id")=== "rosso"){
+                    $(this).toggleClass("rosso")
+                    alert("p1");
+                }else{
+                    $(this).toggleClass("blue")
+                    alert("p2")
+                }
+            })
+           
+        })
+
+    </script>
+</body>
+</html>

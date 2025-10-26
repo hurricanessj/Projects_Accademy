@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <form id = "gestione">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="es Mario">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="text" name="cognome" placeholder="ES. Rossi">
+        <button type="submit">Invia</button>
+     <script>
+        $(document).ready(function(){
+            $("#gestione").on('submit',function(e){
+                e.preventDefault()
+                    var arrayForm=$(this).serializeArray()
+                    console.log(arrayForm)
+                    var jsonForm={}
+                    $.each(arrayForm,function(){
+                        jsonForm[this.name]=this.value
+                    })
+                    console.log(jsonForm)
+            })
+        })
+    </script>
+</body>
+</html>

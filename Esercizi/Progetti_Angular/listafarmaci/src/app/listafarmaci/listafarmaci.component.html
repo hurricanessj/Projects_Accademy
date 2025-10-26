@@ -1,0 +1,83 @@
+<h2>Lista Farmaci</h2>
+
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-center mb-3">Lista Farmaci</h5>
+
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Principio Attivo</th>
+          <th scope="col">Quantità</th>
+          <th scope="col">Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let farmaco of farmaci; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ farmaco.nome }}</td>
+          <td>{{ farmaco.principioAttivo }}</td>
+          <td>{{ farmaco.quantita }}</td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange"
+              class="bi bi-wrench-adjustable-circle-fill me-2" viewBox="0 0 16 16" type="button" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" (click)="setFarmacoCorrente(farmaco)">
+              <path
+                d="M6.705 8.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+              <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m-6.202-4.751 1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2a7.03 7.03 0 0 1-2.949-2.951M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+            </svg>
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red" class="bi bi-trash2-fill"
+              viewBox="0 0 16 16" (click)="eliminaFarmaco(farmaco.id!)" style="cursor: pointer">
+              <path
+                d="M2.037 3.225A.7.7 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.7.7 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z" />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="modificaForm" (ngSubmit)="salvaModifiche()">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" formControlName="nome">
+          </div>
+
+          <div class="mb-3">
+            <label for="principioAttivo" class="form-label">Principio Attivo</label>
+            <input type="text" class="form-control" id="principioAttivo" formControlName="principioAttivo">
+          </div>
+
+          <div class="mb-3">
+            <label for="quantita" class="form-label">Quantità</label>
+            <input type="number" class="form-control" id="quantita" formControlName="quantita">
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" [disabled]="modificaForm.invalid">Salva modifiche</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>

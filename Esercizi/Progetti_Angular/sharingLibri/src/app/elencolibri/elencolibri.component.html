@@ -1,0 +1,9 @@
+<h2>Libri</h2>
+<ul>
+    <li *ngFor="let lib of libri">
+        {{ lib.name }} - Disponibili: {{ lib.disponibili }}
+        <button (click)="addToChart(lib)" [disabled]="lib.disponibili === 0">
+            Aggiungi
+        </button>
+    </li>
+</ul>

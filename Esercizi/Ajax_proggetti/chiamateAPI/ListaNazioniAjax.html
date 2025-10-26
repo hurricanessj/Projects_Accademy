@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h1>
+                    Visualizza Bandiere 
+                </h1>
+
+            </div>
+        </div>
+            <button id="caricaDati" type="button"  class="btn btn-info">Carica Dati</button>
+            <ul id="listaBandiere">
+                
+            </ul>
+            <script>
+                $(document).ready(function () {
+
+                    $("#caricaDati").on("click", function () {
+                        
+                        $.ajax({
+                            url: "https://restcountries.com/v2/all",
+                            method: "GET",
+                            success: function (data) {
+                                $("#listaBandiere").empty();
+                                //console.log(data)
+                                data.forEach(user => {
+                                    $("#listaBandiere").append(`<li><a href="visualizzaNazioni.html?id=${user.alpha3Code}">${user.name}</a></li>`)
+                                });
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+
+                    });
+
+                });
+                </script>
+    </div>
+</body>
+
+</html>

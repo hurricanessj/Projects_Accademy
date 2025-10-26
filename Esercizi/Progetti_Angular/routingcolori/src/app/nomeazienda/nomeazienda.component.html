@@ -1,0 +1,9 @@
+<p>{{nomepassato}}</p>
+<select [(ngModel)]="valoreSelezionato" >
+    <ng-container *ngFor="let a of autoList">
+        <option [ngValue]="a" *ngIf="a.prezzo > 30">
+            <span>{{a.modello}}</span>
+        </option>
+    </ng-container>
+</select>
+<app-visualizza-img ></app-visualizza-img>

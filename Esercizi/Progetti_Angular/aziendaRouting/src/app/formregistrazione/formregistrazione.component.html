@@ -1,0 +1,30 @@
+<div class="d-flex flex-column min-vh-100">
+    <div class="container py-4" style="max-width: 400px;">
+        <h3 class="mb-4 text-center">Accesso Utente</h3>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username" required
+            #usernameInput="ngModel" />
+            <div *ngIf="usernameInput.invalid && usernameInput.touched" class="text-danger">
+                Username obbligatorio
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" required
+            #passwordInput="ngModel" />
+            <div *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">
+                Password obbligatoria
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Accedi</button>
+        
+        <div *ngIf="errore" class="alert alert-danger mt-3">
+            Username o password errati.
+        </div>
+    </form>
+</div>
+</div>

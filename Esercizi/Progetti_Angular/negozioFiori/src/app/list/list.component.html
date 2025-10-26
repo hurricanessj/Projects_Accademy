@@ -1,0 +1,42 @@
+<div class="container mt-4">
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Cerca per nominativo" [(ngModel)]="filtroNome" (input)="onFiltroNomeChange()" />
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" [(ngModel)]="filtroStato" (change)="onFiltroStatoChange()">
+        <option value="tutti">Tutti</option>
+        <option value="si">Consegnati</option>
+        <option value="no">Non consegnati</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-4" *ngFor="let c of listaConsegne">
+      <div class="card border-{{ c.consegnato ? 'success' : 'secondary' }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ c.nominativo }}</h5>
+          <p class="card-text">
+            <strong>Indirizzo:</strong> {{ c.indirizzo }}<br>
+            <strong>Prodotto:</strong> {{ c.prodotto }}<br>
+            <strong>Codice:</strong> {{ c.codice_consegna }}<br>
+            <strong>Data:</strong> {{ c.data | date: 'shortDate' }}<br>
+            <strong>Consegnato:</strong> <span class="badge bg-{{ c.consegnato ? 'success' : 'warning text-dark' }}">{{ c.consegnato ? 'Sì' : 'No' }}</span><br>
+            <strong>Dettagli:</strong> {{ c.dettagli || 'N/D' }}
+          </p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-sm btn-primary" (click)="editDelivery(c)">Modifica</button>
+            <button class="btn btn-sm btn-success" [disabled]="c.consegnato" (click)="segnaComeConsegnato(c)">Segna consegnato</button>
+            <button class="btn btn-sm btn-danger" [disabled]="!c.consegnato" (click)="deleteDelivery(c.id, c.consegnato)">Elimina</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p *ngIf="listaConsegne.length == 0" class="text-muted mt-4">Nessuna consegna trovata.</p>
+
+  <app-form  [consegna]="selectedDelivery" (save)="salvaConsegna($event)" (cancel)="resetForm()"></app-form>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <title>Map Example</title>
+</head>
+<body>
+
+    <select id="citySelect" onchange="changeCity()">
+        <option value="napoli">Napoli</option>
+        <option value="sicilia">Sicilia</option>
+        <option value="sardegna">Sardegna</option>
+        <option value="amalfi">Amalfi</option>
+        <option value="ercolano">Ercolano</option>
+    </select>
+
+    <div id="mapid" style="width: 600px; height: 400px;"></div>
+
+    <script>
+        var mymap = L.map('mapid').setView([40.8522, 14.2681], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(mymap);
+
+        var cities = {
+            napoli:   { lat: 40.8522, lon: 14.2681 },  //inserire gia nel json l'immagine
+            sicilia:  { lat: 37.6000, lon: 14.0154 },
+            sardegna: { lat: 40.1209, lon: 9.0129 },
+            amalfi:   { lat: 40.6346, lon: 14.6029 },
+            ercolano: { lat: 40.8063, lon: 14.3486 }
+        };
+
+        function changeCity() {
+    var city = document.getElementById('citySelect').value;
+    var lat = cities[city].lat;
+    var lon = cities[city].lon;
+
+    var cityImages = {
+        napoli: "imgNapoli.jpg",
+        sicilia: "imgsicilia.jpg",
+        sardegna: "imgSardegna.jpg",
+        amalfi: "imgAmalfi.jpg",
+        ercolano: "imgErcolano.jpg"
+    };
+
+    mymap.setView(new L.LatLng(lat, lon), 13);
+    L.marker([lat, lon]).addTo(mymap)
+        .bindPopup(`
+            <div>
+                <strong>${city.charAt(0).toUpperCase() + city.slice(1)}</strong><br>
+                <img src="${cityImages[city]}" alt="${city}" style="width: 200px; height: auto;">
+            </div>
+        `);
+}
+
+
+    </script>
+</body>
+</html>

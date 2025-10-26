@@ -1,0 +1,33 @@
+
+
+#hd {
+    height: 4em;
+background-color: rgb(6, 6, 92);
+}
+
+#hdnx {
+    height: 100px;
+}
+
+#headerDescription {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 30px;
+}
+
+#cardDescr {
+    background-color: #ffb703;
+}
+
+#cardAttivita {
+    background-color: #c1121f;
+}
+
+
+.gallery-img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}

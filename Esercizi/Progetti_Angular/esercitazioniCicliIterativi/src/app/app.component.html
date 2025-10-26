@@ -1,0 +1,28 @@
+<app-stampaelementi [prendiArray]="arrayDiPersone"></app-stampaelementi>
+<app-stampapari [listaNumeri]="listaNumeri"></app-stampapari>
+<app-cercaelemento [risultati]="utenti"></app-cercaelemento>
+<app-filtrolength [listaPersone]="arrayDiPersone"></app-filtrolength>
+<app-somma></app-somma>
+<app-cercaelemento2 [listaNumeri]="listaNumeri" [cercaNumero]="6"></app-cercaelemento2>
+<app-contanomiperlettera [nomi]="arrayDiPersone"></app-contanomiperlettera>
+<app-maggiorenni #refMagg [listUtentiMin]="utenti"></app-maggiorenni>
+<button (click)="refMagg.cercaMaggiorenni()">click</button>
+<button (click)="refMagg.calcoloMigliorMedia()">cerca miglio media</button>
+<app-prodotto-economico [listaProdotti]="prodotti"></app-prodotto-economico>
+<app-ordini [arrayOrdini]="ordini" (numero)="prendiOrdiniPronti($event)"></app-ordini>
+<!--clienti milano-->
+<app-clienti-milano [clientiFiglio]="abitazioneClienti"></app-clienti-milano>
+<app-libropagine [arrLibri]="libri"></app-libropagine>
+<app-eventi-futuri [eventi]="eventiwknd"></app-eventi-futuri>
+<app-scadenza></app-scadenza>
+<app-prodottifiniti [prodFiniti]="checkGiacenza()"></app-prodottifiniti>
+
+<app-nonscaduti #prodNotScad></app-nonscaduti>
+<button (click)="prodNotScad.prendiProdotti(prodottononscaduto)">invia</button>
+
+<app-checkacquistabili></app-checkacquistabili>
+<app-media [media]="mediaVotiStudMilano()"></app-media>
+
+<app-libri #copie></app-libri>
+<button (click)="copie.prendiCopie(passaCopie)">passaCopie</button>
+<app-eventiweek></app-eventiweek>

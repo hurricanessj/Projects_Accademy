@@ -1,0 +1,83 @@
+Query da svolgere :
+1. Trova tutti i pazienti visitati dal medico "Giovanni Verdi".
+2. Elenca i pazienti che hanno avuto una visita medica nel 2023.
+3. Trova i pazienti con esito "Positivo" in almeno una visita.
+4. Trova tutti i pazienti che sono stati visitati da un medico del reparto di "Cardiologia".
+5. Trova il nome e cognome di tutti i pazienti senza visite mediche
+ 
+6. Trova i pazienti che hanno avuto una visita dopo il 1° gennaio 2024
+ 
+7. Trova i pazienti con eta inferiore a 30.
+ 
+8. Trova tutti i pazienti che hanno avuto una visita tra 2023-01-01 e 2023-12-31
+ 
+
+
+
+
+
+const medico = db.medici.findOne({ nome: "Giovanni", cognome: "Verdi" });
+
+1) db.pazienti.find({ "visite_mediche.cod_medico": { $eq: "R001" } });
+
+db.medici.find({(nome($eq: "Giovanni Verdi")})
+
+db.pazienti.find({(visite_mediche.cod_medico:{ $eq:  XYTQZM10A78A215R 
+ 
+ 
+
+2) 
+
+db.pazienti.find({
+  visite_mediche: {
+    $elemMatch: {
+      data: { $gte: "2023-01-01", $lte: "2023-12-31" }
+    }
+  }
+});
+
+
+3)
+ db.pazienti.find({
+  "visite_mediche.esito": "Positivo"
+});
+
+4)
+db.medici.find({(specializzazione($eq: "Cardiologia")})
+
+db.pazienti.find({(visite_mediche.cod_medico:{ $eq:  R007 , R015, R017
+
+
+5)
+
+db.pazienti.find(
+  { visite_mediche: { $size: 0 } },
+  { nome: 1, cognome: 1, _id: 0 }
+);
+
+
+
+6)
+db.pazienti.find({
+  visite_mediche: {
+data: { $gt: "2023-01-01" } 
+}
+});
+
+
+
+7)
+db.pazienti.find({
+  data_nascita: { $gt: "1995-01-01" }
+});
+
+
+
+8)
+db.pazienti.find({
+  visite_mediche: {
+    $elemMatch: {
+      data: { $gte: "2023-01-01", $lte: "2023-12-31" }
+    }
+  }
+});

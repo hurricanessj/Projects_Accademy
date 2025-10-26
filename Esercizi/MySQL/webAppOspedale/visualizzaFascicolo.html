@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <title>Fascicolo Ospedaliero</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3 class="text-center mt-5">Fascicolo Medico</h3>
+            <input class="form-control w-50 rounded-5 shadow-lg mt-5 mx-auto" type="search"
+                placeholder="inserisci codice fiscale" aria-label="Search" id="insCF">
+            <div class="row">
+                <div class=" d-flex justify-content-center align-items-center mt-5 d-none" id="divTabella">
+                    <table class="table " id="tbPersonalInfo">
+                        <thead>
+                            <tr>
+                                <th scope="col">Visita</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">info</th>
+                                <th scope="col">Medico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="riempiTabella">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">La Tua Visita</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalInfo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdropMedico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Info Medico</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalMedico">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var pazienti = [];
+        var medici = []
+
+        $.ajax({
+            url: "pazienti.json",
+            method: "GET",
+            success: function (data) {
+                pazienti = data;
+                console.log("JSON pazienti caricato:", pazienti);
+            },
+            error: function (error) {
+                console.error("Errore nella richiesta", error);
+            }
+        });
+
+        $.ajax({
+            url: "medici.json",
+            method: "GET",
+            success: function (datiMedici) {
+                medici = datiMedici;
+                console.log("JSON pazienti caricato:", pazienti);
+            },
+            error: function (error) {
+                console.error("Errore nella richiesta", error);
+            }
+        });
+
+        $('#insCF').on('keypress', function (e) {
+            if (e.key === "Enter") {
+                const valoreInput = $(this).val().trim().toLowerCase();
+                const risultato = pazienti.find(dati => dati.codice_fiscale.toLowerCase() === valoreInput);
+                $("#riempiTabella").empty();
+
+                if (risultato && risultato.visite_mediche.length > 0) {
+                    risultato.visite_mediche.forEach(visita => {
+                        $("#riempiTabella").append(`
+                    <tr>
+                        <td>${visita.diagnosi}</td>
+                        <td>${visita.data}</td>
+                        <td><button data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="bottoneVisita" class="btn btn-info rounded-4" >Info</button></td> 
+                        <td><button data-bs-toggle="modal" data-bs-target="#staticBackdropMedico" id="bottonemedico" class="btn btn-primary rounded-5">Medico</button></td>
+                    </tr>`);
+                    });
+                    $("#divTabella").removeClass("d-none");
+
+                } else {
+                    $("#riempiTabella").append(`<tr><td colspan="4" class="text-danger text-center">Nessuna visita trovata</td></tr>`);
+                    $("#divTabella").removeClass("d-none");
+                }
+            }
+        });
+
+        $('#riempiTabella').on("click", "#bottoneVisita", function () {
+            const riga = $(this);
+            const indice = riga.index();
+            const cf = $('#insCF').val().trim().toLowerCase();
+
+            const paziente = pazienti.find(persona => persona.codice_fiscale.toLowerCase() === cf);
+            const visita = paziente.visite_mediche[indice];
+
+            const contenuto = `<p><strong>Diagnosi:</strong> ${visita.diagnosi}</p>
+                               <p><strong>Data:</strong> ${visita.data}</p>
+                            <p><strong>Esito:</strong> ${visita.esito}</p>`;
+            $('#modalInfo').html(contenuto);
+        });
+
+        $('#riempiTabella').on("click", "#bottonemedico", function () {
+            const riga = $(this);
+            const indice = riga.index();
+            const cf = $('#insCF').val().trim().toLowerCase();
+
+            const paziente = pazienti.find(persona => persona.codice_fiscale.toLowerCase() === cf);
+            const visita = paziente.visite_mediche[indice];
+            const codMedico = visita.cod_medico;
+
+            const medico = medici.find(m => m.reparto.codice === codMedico);
+            const contenuto = `<p><strong>Nome:</strong> ${medico.nome} ${medico.cognome}</p>
+                   <p><strong>Specializzazione:</strong> ${medico.specializzazione}</p>
+                   <p><strong>Reparto:</strong> ${medico.reparto.nome}</p>
+                   <p><strong>Codice Reparto:</strong> ${medico.reparto.codice}</p>
+                   <p><strong>Piano Reparto:</strong> ${medico.reparto.piano}</p>`;
+
+            $('#modalMedico').html(contenuto);
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.bg-menta {
+  background-color: #CFFFE5;
+}
+
+.app-content {
+  padding: 2rem;
+  min-height: calc(100vh - 56px); /* lascia spazio alla navbar */
+  background-color: #F8FFFC;
+}

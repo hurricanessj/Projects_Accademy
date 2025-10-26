@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Report_1 = require("./Report");
+var Invoice_1 = require("./Invoice");
+var genericArchive_1 = require("./genericArchive");
+var archivioGenerale = new genericArchive_1.Archive();
+var report1 = new Report_1.Report(1, "Rapporto Vendite", "Contenuto dettagliato vendite...");
+var report2 = new Report_1.Report(2, "Analisi di Mercato", "Trend e analisi...");
+var invoice1 = new Invoice_1.Invoice(3, "Fattura #1001", 250.00);
+var invoice2 = new Invoice_1.Invoice(4, "Fattura #1002", 475.50);
+archivioGenerale.addDocument(report1);
+archivioGenerale.addDocument(report2);
+archivioGenerale.addDocument(invoice1);
+archivioGenerale.addDocument(invoice2);
+console.log("Titoli archiviati:");
+archivioGenerale.listTitles().forEach(function (titolo) { return console.log(titolo); });

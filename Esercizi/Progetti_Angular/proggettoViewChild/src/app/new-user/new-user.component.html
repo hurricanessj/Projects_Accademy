@@ -1,0 +1,14 @@
+<form [formGroup]="formUtente" (ngSubmit)="salvaDati()">
+    <div class="form-group">
+        <label>Nome:
+            <input #firstName type="text" formControlName="firstName">
+            <div *ngIf="firstName.oninvalid">
+                inserisci almeno 3 caratteri
+            </div>
+            <label>Email:
+                <input type="email" formControlName="email">
+                <button type="submit" [disabled]="formUtente.invalid">invia</button>
+            </label>
+        </label>
+    </div>
+</form>

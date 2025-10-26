@@ -1,0 +1,7 @@
+<h1>Assegna Compiti</h1>
+<p>messagio dall'alunno: {{compito}}</p>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" [(ngModel)]="compito" rows="3"></textarea>
+</div>
+<button (click)="sendCompito()">invia compiti</button>

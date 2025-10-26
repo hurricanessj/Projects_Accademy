@@ -1,0 +1,21 @@
+<!--
+primo esercizio passare Input da padre a figlio il messaggio:
+[stringaFiglio]="stringaPadre"
+
+ secondo esercizio output ricevi saluto dal figlio e lo riceve il padre
+ (messaggioFiglio)="riceviSaluto($event)"
+
+
+ terzo esercizio Output il padre conta quanti click sono stati fatti sul bottone del figlio
+ (cliccato)="gestisciClick()"
+
+ quarto esercizio:
+ [stringaDaRicevere]="stringaDaPassare"
+
+
+ quinto esercizio
+[stringaDaRicevere]="stringaDaPassare" (confermaStringa)="gestisciLaStringa($event)"
+-->
+
+<app-figlio [stringaDaRicevere]="stringaDaPassare" (confermaStringa)="gestisciLaStringa($event)"></app-figlio>
+

@@ -1,0 +1,24 @@
+{
+  "prodotti": [
+    {
+      "id": 1,
+      "nome": "Mouse Wireless Logitech M185",
+      "descrizione": "Mouse compatto wireless plug-and-play con connessione USB.",
+      "prezzo": 19.99,
+      "quantita": 50,
+      "categoria_id": 1,
+      "fornitore_id": 1,
+      "codice_sku": "LOG-M185"
+    },
+    {
+      "id": 2,
+      "nome": "Tastiera Meccanica Keychron K2",
+      "descrizione": "Tastiera meccanica wireless retroilluminata compatibile con Mac/Windows.",
+      "prezzo": 89.00,
+      "quantita": 30,
+      "categoria_id": 1,
+      "fornitore_id": 2,
+      "codice_sku": "KEY-K2"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\ACADEMY004\Desktop\esC#\bin\Debug\net9.0\esC#.exe
+C:\Users\ACADEMY004\Desktop\esC#\bin\Debug\net9.0\esC#.deps.json
+C:\Users\ACADEMY004\Desktop\esC#\bin\Debug\net9.0\esC#.runtimeconfig.json
+C:\Users\ACADEMY004\Desktop\esC#\bin\Debug\net9.0\esC#.dll
+C:\Users\ACADEMY004\Desktop\esC#\bin\Debug\net9.0\esC#.pdb
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.AssemblyInfoInputs.cache
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.AssemblyInfo.cs
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.csproj.CoreCompileInputs.cache
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.dll
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\refint\esC#.dll
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.pdb
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\esC#.genruntimeconfig.cache
+C:\Users\ACADEMY004\Desktop\esC#\obj\Debug\net9.0\ref\esC#.dll

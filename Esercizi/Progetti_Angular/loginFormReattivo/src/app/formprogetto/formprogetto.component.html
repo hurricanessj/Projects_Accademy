@@ -1,0 +1,28 @@
+<div class="card project-form-card shadow-sm mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-success mb-3">
+      {{ form.value.id ? 'Modifica Progetto' : 'Nuovo Progetto' }}
+    </h5>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Titolo" formControlName="titolo" required>
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Descrizione" formControlName="descrizione" required>
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Deadline" formControlName="deadLine" required>
+      </div>
+
+      <div class="col-12 d-flex gap-2 mt-3">
+        <button type="submit" class="btn btn-success">
+          {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Progetto
+        </button>
+        <button *ngIf="form.value.id" type="button" class="btn btn-outline-secondary" (click)="resetForm()">
+          Annulla
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

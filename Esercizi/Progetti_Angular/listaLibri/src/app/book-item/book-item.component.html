@@ -1,0 +1,13 @@
+<div class="card m-2 p-3" [ngClass]="{ 'bg-secondary text-white': !book.available }">
+  <h5>{{ book.title }}</h5>
+  <p>Autore: {{ book.author }}</p>
+  <p>Anno: {{ book.year }}</p>
+  <p>Prezzo: {{ book.price | priceFormat }}</p>
+
+  <button
+    [ngClass]="book.available ? 'btn btn-primary' : 'btn btn-danger'"
+    [disabled]="!book.available"
+    (click)="onAddToCart()">
+    Aggiungi al carrello
+  </button>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Ricetta</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<body>
+    <div class="container mt-5">
+        <h2 id="nomeRicetta"></h2>
+        <p id="procedimentoRicetta" class="lead"></p>
+    </div>
+
+    <script>
+        const dati = JSON.parse(sessionStorage.getItem("ricettaSelezionata"));
+        if (dati) {
+            document.getElementById("nomeRicetta").textContent = dati.nome;
+            document.getElementById("procedimentoRicetta").textContent = dati.procedimento;
+        }
+    </script>
+</body>
+</html>

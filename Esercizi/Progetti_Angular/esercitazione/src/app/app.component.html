@@ -1,0 +1,21 @@
+<!--
+{{title}}
+<button (click)="saluta('ciao')">clicca</button> visualizzazione in console log del messaggio saluta da html a ts 
+<app-figlio
+    [messaggio]="title"></app-figlio>
+    visualizza messaggio figlio piu titolo padre tramite il metodo poi introdotto nel template figlio
+<app-listautenti [utentiFiglio]="utenti" (messaggioAlPadre)="riceviDati($event)"></app-listautenti> input che passa il json al figlio
+ output messagioAlPadre del figlio metodo di ricezione dei dati del padre
+ 
+ <app-form></app-form>
+ <app-elettrodomestici #referenceOfferte></app-elettrodomestici>
+ 
+ <ul>
+     <li *ngFor="let off of referenceOfferte.offerte">
+         {{off}}
+        </li>
+    </ul>
+    -->
+
+    <input type="text" [(ngModel)]="categoriaPresa" (change)="animali.popolaSelect()">
+    <app-zoo [inputCategoria]="categoriaPresa" #animali></app-zoo>

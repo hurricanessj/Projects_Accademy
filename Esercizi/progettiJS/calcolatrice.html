@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>risultato</title>
+</head>
+<body>
+ 
+ 
+    <form id="calcolatrice">
+        <input type="number" id="n1" name="n1" required><br><br>
+    
+        <label for="operazione">Scegli l'operazione</label>
+        <select id="scelta" name="operazione" required>
+          <option value="addizione"  id="addizione">Addizione</option>
+          <option value="sottrazione"  id="sottrazione">Sottrazione</option>
+          <option value="moltiplicazione"  id="moltiplicazione">Moltiplicazione</option>
+          <option value="divizione"  id="divisione">Divisione</option>
+        </select><br><br>
+    
+        <input type="number" id="n2" name="n2" required><br><br>
+     
+        <button type="submit">Invia</button>
+      </form>
+   
+    <table>
+      <tr><th>risultato</th><td id="risultato"></td></tr>
+    </table>
+   
+</body>
+
+<script>
+    const num1 = parseFloat(localStorage.getItem("num1"));
+    const num2 = parseFloat(localStorage.getItem("num2"));
+    const scelta = parseFloat(localStorage.getItem("scelta"));
+
+    let risultato ={
+        "+" : a+b,
+        "-" : a-b,
+        "*" : a*b,
+        "/" : a/b,
+    }
+</script>
+</html>

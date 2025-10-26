@@ -1,0 +1,17 @@
+import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
+
+@Directive({
+  selector: '[appBkg]',
+  standalone: false
+})
+export class BkgDirective implements AfterViewInit {
+
+  @Input('appBkg')
+  color!: string
+
+  constructor(private element: ElementRef ) { }
+  ngAfterViewInit(): void {
+    this.element.nativeElement.style.backgroundColor = this.color
+  }
+
+}

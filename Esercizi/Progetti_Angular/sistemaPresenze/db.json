@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "gaetano@mail.com",
+      "online": false,
+      "password": "qwerty",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "email": "davide@mail.com",
+      "online": false,
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "email": "francesco@mail.com",
+      "online": false,
+      "password": "3fedin",
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "email": "gennaro@mail.com",
+      "online": true,
+      "password": "qwertyuiop",
+      "role": "user"
+    },
+    {
+      "id": "5",
+      "email": "vincenzo@mail.com",
+      "online": false,
+      "password": "3fedin",
+      "role": "user"
+    },
+    {
+      "id": "6",
+      "email": "giuseppe@mail.com",
+      "online": false,
+      "password": "3fedin",
+      "role": "user"
+    },
+    {
+      "id": "7",
+      "email": "salvatore@mail.com",
+      "online": false,
+      "password": "3fedin",
+      "role": "user"
+    },
+    {
+      "id": "8",
+      "email": "christian@mail.com",
+      "online": false,
+      "password": "3fedin",
+      "role": "user"
+    },
+    {
+      "id": "9",
+      "email": "simone@mail.com",
+      "online": false,
+      "password": "pwd123",
+      "role": "user"
+    },
+    {
+      "id": "10",
+      "nome": "admin",
+      "email": "admin@mail.com",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ]
+}

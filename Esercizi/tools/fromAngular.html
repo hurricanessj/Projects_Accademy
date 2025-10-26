@@ -1,0 +1,43 @@
+
+
+<!--template driven-->
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <label>Nome:
+    <input #firstName type="text" name="firstName" ngModel required minlength="3">
+    <div *ngIf="firstName.value.length < 3">
+      inserisci almeno 3 caratteri
+
+    </div>
+  </label>
+  <label>Email:
+    <input type="email" name="Email" ngModel required email>
+  </label>
+
+  <button type="submit">invia</button>
+</form>
+<!--
+  onSubmit(form: any){
+    console.log(form);
+  }
+  -->
+
+<!--reactive from-->
+<form [formGroup]="userForm" (ngSubmit)="userForm.value">
+  <label>Nome:
+    <input type="text" formControlName="firstName">
+    <div *ngIf="firstName.oninvalid">
+      inserisci almeno 3 caratteri
+    </div>
+    <label>Email:
+      <input type="email" formControlName="email">
+      <button type="submit" [disabled]="userForm.invalid">invia</button>
+
+    </label>
+  </label>
+</form>
+<!--
+  userForm = new FormGroup({
+    firstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('', [Validators.required, Validators.email])
+  })
+  -->

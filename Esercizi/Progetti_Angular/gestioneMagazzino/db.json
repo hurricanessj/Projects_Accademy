@@ -1,0 +1,81 @@
+{
+  "prodotti": [
+    {
+      "id": 1,
+      "nome": "Mouse Wireless Logitech",
+      "immagine": "assets/images/lmouseImg.jpg",
+      "descrizione": "Mouse wireless con connessione Bluetooth, ergonomico",
+      "giacenza": 120
+    },
+    {
+      "id": 2,
+      "nome": "Tastiera Meccanica Corsair",
+      "immagine": "assets/images/tastieraImg.jpg",
+      "descrizione": "Tastiera con retroilluminazione RGB e switch meccanici",
+      "giacenza": 75
+    },
+    {
+      "id": 3,
+      "nome": "Monitor 24\" Samsung",
+      "immagine": "assets/images/monitorImg.jpg",
+      "descrizione": "Monitor Full HD 24 pollici con porta HDMI",
+      "giacenza": 30
+    },
+    {
+      "id": 4,
+      "nome": "SSD 1TB Kingston",
+      "immagine": "assets/images/ssdImg.jpg",
+      "descrizione": "SSD interno da 1TB con velocità di lettura 500MB/s",
+      "giacenza": 60
+    }
+  ],
+  "ordini": [
+    {
+      "id": 101,
+      "numero_ordine": "ORD-001",
+      "indirizzo": "Via Roma 12, Milano",
+      "telefono": "+39 333 1234567",
+      "stato": "In preparazione",
+      "prodotti": [
+        {
+          "prodotto_id": 1,
+          "quantità": 2
+        },
+        {
+          "prodotto_id": 2,
+          "quantità": 1
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "numero_ordine": "ORD-002",
+      "indirizzo": "Corso Garibaldi 45, Napoli",
+      "telefono": "+39 345 7654321",
+      "stato": "Spedito",
+      "prodotti": [
+        {
+          "prodotto_id": 3,
+          "quantità": 1
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "numero_ordine": "ORD-003",
+      "indirizzo": "Viale Italia 99, Torino",
+      "telefono": "+39 392 1122334",
+      "stato": "Consegnato",
+      "prodotti": [
+        {
+          "prodotto_id": 1,
+          "quantità": 1
+        },
+        {
+          "prodotto_id": 4,
+          "quantità": 2
+        }
+      ]
+    }
+  ]
+}

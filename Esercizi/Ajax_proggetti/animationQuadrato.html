@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .quadrato{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+    }
+</style>
+</head>
+<body>
+<button class="btn1">Animazione</button>
+<button class="btn2">Reset</button>
+<div class="quadrato"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".btn1").click(function(){
+      $("quadrato").animate({left: "+=100px"});
+    });
+    $(".btn2").click(function(){
+      $("p").animate({left: "0"});
+    });
+  });
+  </script>
+
+</body>
+</html>

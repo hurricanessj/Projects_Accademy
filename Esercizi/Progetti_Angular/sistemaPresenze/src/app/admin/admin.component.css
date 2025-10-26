@@ -1,0 +1,13 @@
+.demo-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.demo-row-is-clicked {
+  background-color: #e3f2fd;
+}
+
+.row-online {
+  background-color: #e8f5e9 !important; 
+}
+

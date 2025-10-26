@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="confirmButton">Are you sure?</button>
+
+
+    <script>
+
+        $(document).ready(function() {
+
+$('#confirmButton').click(function() {
+
+  Swal.fire({
+
+    title: 'Are you sure?',
+
+    text: "You won't be able to revert this!",
+
+    icon: 'warning',
+
+    showCancelButton: true,
+
+    confirmButtonText: 'Yes, delete it!',
+
+    cancelButtonText: 'No, cancel!',
+
+  }).then((result) => {
+
+    if (result.isConfirmed) {
+
+      Swal.fire(
+
+        'Deleted!',
+
+        'Your file has been deleted.',
+
+        'success'
+
+      );
+
+    } else if (result.isDismissed) {
+
+      Swal.fire(
+
+        'Cancelled',
+
+        'Your file is safe :)',
+
+        'error'
+
+      );
+
+    }
+
+  });
+
+});
+
+});
+
+    </script>
+    
+</body>
+</html>

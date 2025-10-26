@@ -1,0 +1,246 @@
+[{
+        "codice_persona": "P001",
+        "cf": "RSSMRA80A01H501U",
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "genere": "M",
+        "professione": "Ingegnere",
+        "data_di_nascita": "1980-01-01",
+        "abbonamento": {
+            "codice_abbonamento": "AB001",
+            "data_inizio": "2024-01-01",
+            "data_fine": "2024-12-31",
+            "data_prezzo": 450.00
+        },
+        "entrata": [{
+                "cod_entrata": "E001",
+                "ora": "08:30:00",
+                "data": "2024-05-10",
+                "prezzo": 0.00
+            },
+            {
+                "cod_entrata": "E002",
+                "ora": "18:15:00",
+                "data": "2024-05-15",
+                "prezzo": 0.00
+            }
+        ]
+    },
+    {
+        "codice_persona": "P002",
+        "cf": "BNCLGU75B02F205D",
+        "nome": "Luigi",
+        "cognome": "Bianchi",
+        "genere": "M",
+        "professione": "Medico",
+        "data_di_nascita": "1975-02-02",
+        "abbonamento": {
+            "codice_abbonamento": "AB002",
+            "data_inizio": "2024-02-01",
+            "data_fine": "2024-08-01",
+            "data_prezzo": 300.00
+        },
+        "entrata": [{
+            "cod_entrata": "E003",
+            "ora": "07:45:00",
+            "data": "2024-05-12",
+            "prezzo": 0.00
+        }]
+    },
+    {
+        "codice_persona": "P003",
+        "cf": "VRDGPP85C03D612E",
+        "nome": "Giuseppe",
+        "cognome": "Verdi",
+        "genere": "M",
+        "professione": "Architetto",
+        "data_di_nascita": "1985-03-03",
+        "abbonamento": {
+            "codice_abbonamento": "AB003",
+            "data_inizio": "2024-03-15",
+            "data_fine": "2024-09-15",
+            "data_prezzo": 270.00
+        },
+        "entrata": [{
+                "cod_entrata": "E004",
+                "ora": "12:00:00",
+                "data": "2024-05-14",
+                "prezzo": 0.00
+            },
+            {
+                "cod_entrata": "E005",
+                "ora": "19:30:00",
+                "data": "2024-05-18",
+                "prezzo": 0.00
+            }
+        ]
+    },
+    {
+        "codice_persona": "P004",
+        "cf": "NRIMTT90D04H703F",
+        "nome": "Matteo",
+        "cognome": "Neri",
+        "genere": "M",
+        "professione": "Programmatore",
+        "data_di_nascita": "1990-04-04",
+        "abbonamento": {
+            "codice_abbonamento": "AB004",
+            "data_inizio": "2024-04-01",
+            "data_fine": "2024-10-01",
+            "data_prezzo": 320.00
+        },
+        "entrata": [{
+            "cod_entrata": "E006",
+            "ora": "09:20:00",
+            "data": "2024-05-11",
+            "prezzo": 0.00
+        }]
+    },
+    {
+        "codice_persona": "P005",
+        "cf": "GLLSNI95E05L404G",
+        "nome": "Simona",
+        "cognome": "Gialli",
+        "genere": "F",
+        "professione": "Insegnante",
+        "data_di_nascita": "1995-05-05",
+        "abbonamento": {
+            "codice_abbonamento": "AB005",
+            "data_inizio": "2024-05-01",
+            "data_fine": "2024-11-01",
+            "data_prezzo": 280.00
+        },
+        "entrata": [{
+                "cod_entrata": "E007",
+                "ora": "17:00:00",
+                "data": "2024-05-13",
+                "prezzo": 0.00
+            },
+            {
+                "cod_entrata": "E008",
+                "ora": "08:00:00",
+                "data": "2024-05-20",
+                "prezzo": 0.00
+            }
+        ]
+    },
+    {
+        "codice_persona": "P006",
+        "cf": "BLUMRA88F06G205H",
+        "nome": "Maria",
+        "cognome": "Blu",
+        "genere": "F",
+        "professione": "Avvocato",
+        "data_di_nascita": "1988-06-06",
+        "abbonamento": {
+            "codice_abbonamento": "AB006",
+            "data_inizio": "2024-01-15",
+            "data_fine": "2024-07-15",
+            "data_prezzo": 250.00
+        },
+        "entrata": [{
+            "cod_entrata": "E009",
+            "ora": "10:10:00",
+            "data": "2024-05-16",
+            "prezzo": 0.00
+        }]
+    },
+    {
+        "codice_persona": "P007",
+        "cf": "VRDLCU82G07I306I",
+        "nome": "Lucia",
+        "cognome": "Verdi",
+        "genere": "F",
+        "professione": "Psicologa",
+        "data_di_nascita": "1982-07-07",
+        "abbonamento": {
+            "codice_abbonamento": "AB007",
+            "data_inizio": "2024-03-01",
+            "data_fine": "2024-09-01",
+            "data_prezzo": 290.00
+        },
+        "entrata": [{
+                "cod_entrata": "E010",
+                "ora": "14:30:00",
+                "data": "2024-05-17",
+                "prezzo": 0.00
+            },
+            {
+                "cod_entrata": "E011",
+                "ora": "16:45:00",
+                "data": "2024-05-19",
+                "prezzo": 0.00
+            }
+        ]
+    },
+    {
+        "codice_persona": "P008",
+        "cf": "RSSGPP78H08F407J",
+        "nome": "Giovanni",
+        "cognome": "Rosa",
+        "genere": "M",
+        "professione": "Commercialista",
+        "data_di_nascita": "1978-08-08",
+        "abbonamento": {
+            "codice_abbonamento": "AB008",
+            "data_inizio": "2024-02-10",
+            "data_fine": "2024-08-10",
+            "data_prezzo": 310.00
+        },
+        "entrata": [{
+            "cod_entrata": "E012",
+            "ora": "07:30:00",
+            "data": "2024-05-21",
+            "prezzo": 0.00
+        }]
+    },
+    {
+        "codice_persona": "P009",
+        "cf": "GRNFBA99I09D508K",
+        "nome": "Fabio",
+        "cognome": "Grani",
+        "genere": "M",
+        "professione": "Fotografo",
+        "data_di_nascita": "1999-09-09",
+        "abbonamento": {
+            "codice_abbonamento": "AB009",
+            "data_inizio": "2024-04-20",
+            "data_fine": "2024-10-20",
+            "data_prezzo": 260.00
+        },
+        "entrata": [{
+                "cod_entrata": "E013",
+                "ora": "13:15:00",
+                "data": "2024-05-22",
+                "prezzo": 0.00
+            },
+            {
+                "cod_entrata": "E014",
+                "ora": "18:00:00",
+                "data": "2024-05-24",
+                "prezzo": 0.00
+            }
+        ]
+    },
+    {
+        "codice_persona": "P010",
+        "cf": "BRNLIA00L10E609L",
+        "nome": "Elia",
+        "cognome": "Bruni",
+        "genere": "M",
+        "professione": "Studente",
+        "data_di_nascita": "2000-10-10",
+        "abbonamento": {
+            "codice_abbonamento": "AB010",
+            "data_inizio": "2024-05-05",
+            "data_fine": "2024-11-05",
+            "data_prezzo": 200.00
+        },
+        "entrata": [{
+            "cod_entrata": "E015",
+            "ora": "11:00:00",
+            "data": "2024-05-23",
+            "prezzo": 0.00
+        }]
+    }
+]

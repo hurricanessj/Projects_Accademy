@@ -1,0 +1,41 @@
+[{
+        "codice_istruttore": "ISTR001",
+        "nome": "Laura",
+        "cognome": "Bianchi",
+        "genere": "F",
+        "specializzazione": "Yoga e Mindfulness",
+        "corsi": ["CORSO001"]
+    },
+    {
+        "codice_istruttore": "ISTR002",
+        "nome": "Marco",
+        "cognome": "Rossi",
+        "genere": "M",
+        "specializzazione": "Pilates e Functional Training",
+        "corsi": ["CORSO002"]
+    },
+    {
+        "codice_istruttore": "ISTR003",
+        "nome": "Sofia",
+        "cognome": "Verdi",
+        "genere": "F",
+        "specializzazione": "Dance Fitness",
+        "corsi": ["CORSO003"]
+    },
+    {
+        "codice_istruttore": "ISTR004",
+        "nome": "Andrea",
+        "cognome": "Neri",
+        "genere": "M",
+        "specializzazione": "High-Intensity Training",
+        "corsi": ["CORSO004"]
+    },
+    {
+        "codice_istruttore": "ISTR005",
+        "nome": "Elena",
+        "cognome": "Gialli",
+        "genere": "F",
+        "specializzazione": "Ginnastica Posturale",
+        "corsi": ["CORSO005"]
+    }
+]

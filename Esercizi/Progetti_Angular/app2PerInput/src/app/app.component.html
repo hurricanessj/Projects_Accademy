@@ -1,0 +1,33 @@
+<!--
+<button (click)="mostraCognomeUtenti = ! mostraCognomeUtenti">mostra/nascondi cognomi</button>
+<p>mostra Cognomi: {{mostraCognomeUtenti}}</p>
+<div *ngFor="let u of utenti">
+  <app-utente [user]="u" [mostraCognome]="mostraCognomeUtenti"></app-utente>
+</div>
+
+<app-pannello>contenuto pannello</app-pannello>
+esercizio tolower toUpper
+<p>{{utente.nome}}</p>
+<app-lowercase [(testo)]="utenteClonato.nome"></app-lowercase>
+<app-uppercase [(testo)]="utenteClonato.nome"></app-uppercase>
+
+esercizio telefono squillo
+<input [(ngModel)]="messaggioDaInviare" type="text">
+
+<button (click)="inviaMessaggio()">inviaMessaggio</button>
+<app-squillo [messaggio]="messaggioPerFiglio" (risposta)="riceviRisposta($event)"></app-squillo>
+<p>{{rispostaDelFiglio}}</p>
+
+<app-figlio [nome]="nomeUtente"></app-figlio>
+<app-figlio (saluto)="riceviSaluto($event)"></app-figlio>
+<button (click)="toggleMenu()">Mostra</button>
+<app-menu *ngIf="mostraMenu"></app-menu>
+-->
+<app-ca-pipe></app-ca-pipe>
+<div>{{"2025-06-06"| moment: "ll"}}</div>
+<div>{{data | moment: 'DD/MM/YYYY'}}</div>
+<div>{{data | moment: "hh:mm"}}</div>
+<div [appBkg] = "'red'">ciao </div>
+<div *ngFor="let utente of utenti | filtro:'nome': 'simone'">{{utente.nome}}</div>
+<input [(ngModel)]="genere" type="text">
+<div *ngFor="let filmistanza of film | filtro:'genere': 'giallo'">{{filmistanza.titolo}}</div>

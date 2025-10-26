@@ -1,0 +1,112 @@
+[{
+        "codice_corso": "CORSO001",
+        "num_sala": "30",
+        "nome": "Yoga Base",
+        "livello_difficolta": "Principiante",
+        "cod_sala": "S1",
+        "cod_istruttore": "ISTR001",
+        "lezioni": [{
+                "codice_lezione": "LEZ001",
+                "giorno": "Lunedì",
+                "ora": "09:00:00",
+                "turno": "Mattina"
+            },
+            {
+                "codice_lezione": "LEZ002",
+                "giorno": "Mercoledì",
+                "ora": "18:30:00",
+                "turno": "Sera"
+            }
+        ]
+    },
+    {
+        "codice_corso": "CORSO002",
+        "num_sala": "35",
+        "nome": "Pilates Avanzato",
+        "livello_difficolta": "Esperto",
+        "cod_sala": "S2",
+        "cod_istruttore": "ISTR002",
+        "lezioni": [{
+                "codice_lezione": "LEZ003",
+                "giorno": "Martedì",
+                "ora": "10:00:00",
+                "turno": "Mattina"
+            },
+            {
+                "codice_lezione": "LEZ004",
+                "giorno": "Giovedì",
+                "ora": "19:00:00",
+                "turno": "Sera"
+            },
+            {
+                "codice_lezione": "LEZ005",
+                "giorno": "Sabato",
+                "ora": "11:00:00",
+                "turno": "Mattina"
+            }
+        ]
+    },
+    {
+        "codice_corso": "CORSO003",
+        "num_sala": "35",
+        "nome": "Zumba Fitness",
+        "livello_difficolta": "Intermedio",
+        "cod_sala": "S3",
+        "cod_istruttore": "ISTR003",
+        "lezioni": [{
+                "codice_lezione": "LEZ006",
+                "giorno": "Lunedì",
+                "ora": "20:00:00",
+                "turno": "Sera"
+            },
+            {
+                "codice_lezione": "LEZ007",
+                "giorno": "Venerdì",
+                "ora": "17:30:00",
+                "turno": "Pomeriggio"
+            }
+        ]
+    },
+    {
+        "codice_corso": "CORSO004",
+        "num_sala": "40",
+        "nome": "CrossFit Intenso",
+        "livello_difficolta": "Esperto",
+        "cod_sala": "S1",
+        "cod_istruttore": "ISTR004",
+        "lezioni": [{
+                "codice_lezione": "LEZ008",
+                "giorno": "Mercoledì",
+                "ora": "07:00:00",
+                "turno": "Mattina"
+            },
+            {
+                "codice_lezione": "LEZ009",
+                "giorno": "Venerdì",
+                "ora": "07:00:00",
+                "turno": "Mattina"
+            }
+        ]
+    },
+    {
+        "codice_corso": "CORSO005",
+        "num_sala": "30",
+        "nome": "Ginnastica Dolce",
+        "livello_difficolta": "Principiante",
+        "cod_sala": "S4",
+        "cod_istruttore": "ISTR005",
+        "lezioni": [{
+                "codice_lezione": "LEZ010",
+                "giorno": "Giovedì",
+                "ora": "15:00:00",
+                "turno": "Pomeriggio"
+            },
+            {
+                "codice_lezione": "LEZ011",
+                "giorno": "Sabato",
+                "ora": "10:00:00",
+                "turno": "Mattina"
+            }
+        ]
+    }
+]

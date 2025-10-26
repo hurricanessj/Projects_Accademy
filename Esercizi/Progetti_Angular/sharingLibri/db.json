@@ -1,0 +1,19 @@
+{
+  "libro": [
+    {
+      "id": "1",
+      "name": "i fratelli karamazov",
+      "disponibili": 6
+    },
+    {
+      "id": "2",
+      "name": "il fu mattia pascal",
+      "disponibili": 5
+    },
+    {
+      "id": "3",
+      "name": "uno nessuno e centomila",
+      "disponibili": 6
+    }
+  ]
+}

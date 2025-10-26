@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body id="secondBody">
+    <header class="position-relative" id="hdnx">
+        <div class="position-absolute bottom-0 start-50 translate-middle-x text-center text-light">
+            <h2 class="m-0 rounded-2" id="headerDescription"> Impostazioni Admin
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                    <path
+                        d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                </svg>
+            </h2>
+        </div>
+    </header>
+
+    <section id="attivita" class="container py-5">
+        <div class="card border-dark mb-4">
+            <div class="card-header bg-success text-white">Aggiungi Utente</div>
+            <div class="card-body">
+                <form id="form-utente">
+                    <div class="row g-3">
+                        <div class="col-md-3"><input type="text" class="form-control" placeholder="Nome" id="nome"
+                                required></div>
+                        <div class="col-md-3"><input type="text" class="form-control" placeholder="Cognome" id="cognome"
+                                required></div>
+                        <div class="col-md-3"><input type="date" class="form-control" id="data_di_nascita" required>
+                        </div>
+                        <div class="col-md-3"><input type="text" class="form-control" placeholder="Cellulare"
+                                id="cellulare" required></div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-3 border-dark"> Aggiungi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <h2 class="text-dark">Tabella degli iscritti</h2>
+
+            <div class="card border-dark mb-4">
+                <div class="card-header bg-primary text-white">Elenco Iscritti</div>
+                <div class="card-body">
+                    <table class="table table-hover table-bordered text-center bg-primary">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cognome</th>
+                                <th>Data di Nascita</th>
+                                <th>Cellulare</th>
+                                <th>Corso</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabellaUtenti"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card border-dark mb-4">
+                <div class="card-header bg-warning text-dark">Aggiungi Corso</div>
+                <div class="card-body">
+                    <form id="form-corso" class="row g-2">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Nome corso" id="nome-corso" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" id="aggCorsi"
+                                class="btn btn-warning w-100 border-dark">Aggiungi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <h2 class="text-dark"> Tabella dei corsi</h2>
+            <div class="card border-dark mb-4">
+                <div class="card-header bg-danger text-white">Elenco Corso</div>
+                <div class="card-body">
+                    <table class="table table-hover table-bordered text-center bg-danger">
+                        <thead class="table-danger">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cognome</th>
+                                <th>Data di Nascita</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableCorsi"></tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $.get('http://localhost:3000/users/get/all', function (data) {
+                data.forEach(persona => {
+                    $("#tabellaUtenti").append(`
+                    <tr>
+                        <td>${persona.nome}</td>
+                        <td>${persona.cognome}</td>
+                        <td>${persona.data_di_nascita}</td>
+                        <td>${persona.cellulare}</td>
+                        <td>${persona.cod_corso}</td>
+                        <td><button type="button" class="btn btn-danger elimina-persona" data-id="${persona.id}">Elimina</button></td>
+                    </tr>`);
+                });
+            });
+
+            $.get('http://localhost:3000/elencoCorsi', function (data) {
+                data.forEach(corso => {
+                    $("#tableCorsi").append(`
+                    <tr>
+                        <td>${corso.nome}</td>
+                        <td>${corso.cod_corso}</td>
+                        <td><button type="button" class="btn btn-danger elimina-corso" data-cod="${corso.cod_corso}">Elimina</button></td>
+                    </tr>`);
+                });
+            });
+
+            $("#aggCorsi").click(function () {
+                const nome = prompt("Nome del corso:");
+                const cod_corso = prompt("Codice del corso:");
+                if (nome && cod_corso) {
+                    $.post('http://localhost:3000/addCorso', { nome: nome, cod_corso: cod_corso }, function () {
+                        location.reload();
+                    });
+                }
+            });
+
+            $(document).on('click', '.elimina-corso', function () {
+                const cod_corso = $(this).data('cod_corso');
+                if (confirm("Vuoi eliminare il corso?")) {
+                    $.ajax({
+                        url: `http://localhost:3000/corsoDelete/${cod_corso}`,
+                        type: 'DELETE',
+                        success: function () {
+                            location.reload();
+                        }
+                    });
+                }
+            });
+
+            $(document).on('click', '.elimina-persona', function () {
+                const id = $(this).data('id');
+                if (confirm("Vuoi eliminare questa persona?")) {
+                    $.ajax({
+                        url: `http://localhost:3000/deletePersona/${id}`,
+                        type: 'DELETE',
+                        success: function () {
+                            location.reload();
+                        }
+                    });
+                }
+            });
+        })
+
+    </script>
+</body>
+
+</html>

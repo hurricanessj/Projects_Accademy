@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body id="corpo">
+
+    <select id="select" onchange="showAuto(value)">
+    </select>
+
+    <div id="macchine"></div>
+    <div id="immagini"></div>
+
+    <script>
+        var people = [
+            { nome: "gaetano", cognome: "esposito", eta: "20", colore: "green", auto: { modello: "maserati", targa: "TRH4932", img: "imgAmalfi.jpg"}, poi:{nome: "Napoli",lat: "40.863", lon: "14.2767"} },
+            { nome: "francesco", cognome: "marrone", eta: "20", colore: "violet", auto: { modello: "ferrari", targa: "TRH4933", img: "imgErcolano.jpg",}, poi:{nome: "Amalfi",lat: "40.6358", lon: "14.605"} },
+            { nome: "gennaro", cognome: "dipietro", eta: "25", colore: "blue", auto: { modello: "bmw", targa: "TRH4934", img: "imgNapoli.jpg" }, poi:{nome: "Polignano A Mare",lat: "40.9969", lon: "17.2167"} },
+            { nome: "Vincenzo", cognome: "Capasso", eta: "20", colore: "red", auto: { modello: "pegeaut", targa: "TRH4935", img: "imgSicilia.jpg"}, poi:{nome: "Genova",lat: "44.4222", lon: "8.9052"} },
+            { nome: "gaetano", cognome: "delprete", eta: "22", colore: "blue", auto: { modello: "clio", targa: "TRH4936", img: "imgSardegna.jpg"}, poi:{nome: "Bologna",lat: "44.5075", lon: "11.3514"} },
+            { nome: "miriana", cognome: "francipane", eta: "21", colore: "pink", auto: { modello: "zentorno", targa: "TRH4937", img: "imgErcolano.jpg"}, poi:{nome: "Milano",lat: "45.4773", lon: "9.1815"} },
+            { nome: "davide", cognome: "rubinacci", eta: "22", colore: "black", auto: { modello: "lambo", targa: "TRH4938", img: "imgSicilia.jpg"} , poi:{nome: "Napoli",lat: "40.863", lon: "14.2767"}},
+            { nome: "davide", cognome: "Cappella", eta: "22", colore: "pink", auto: { modello: "alfa romeo", targa: "TRH4939", img: "imgAmalfi.jpg"}, poi:{nome: "Napoli",lat: "40.863", lon: "14.2767"} }
+        ]
+
+        var select = document.getElementById("select");
+
+        people.forEach(elem => {
+            let temp = JSON.stringify(elem)
+            select.innerHTML += `<option value='${temp}' style="color : ${elem.colore}; "> ${elem.nome} ${elem.cognome}</option>`;
+            console.log(temp)
+        })
+
+
+        function showAuto(value) {
+            var obj = JSON.parse(value);
+            var macchineDiv = document.getElementById("macchine");
+            var immaginiDiv = document.getElementById("immagini");
+
+            macchineDiv.innerHTML = `<p>${obj.auto.modello} ${obj.auto.targa}</p>`;
+            immaginiDiv.innerHTML = `<label>Visualizza immagine</label>
+            <input type="radio" onclick="showImg('${obj.auto.img}')"><br>`;
+        }
+
+        function showImg(imgPath) {
+        var immaginiDiv = document.getElementById("immagini");
+        immaginiDiv.innerHTML += `<img src="${imgPath}" style="width:300px;">`;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-4 border shadow-sm bg-light mx-auto rounded-4"
+      style="max-width: 700px;">
+  <h4 class="mb-4 text-center">{{ form.value.id ? 'Modifica Evento' : 'Aggiungi Evento' }}</h4>
+
+  <div class="row rounded-4">
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Nome Evento</label>
+      <input type="text" class="form-control" formControlName="name" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Tipo</label>
+      <input type="text" class="form-control" formControlName="type" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Città</label>
+      <input type="text" class="form-control" formControlName="city" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Data</label>
+      <input type="datetime-local" class="form-control" formControlName="date" required>
+    </div>
+
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Descrizione</label>
+      <textarea class="form-control" rows="3" formControlName="description" required></textarea>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Creato da</label>
+      <input type="text" class="form-control" formControlName="createdBy" required>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <button type="submit" class="btn btn-info">
+      {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Evento
+    </button>
+    <button *ngIf="form.value.id" type="button" class="btn btn-danger" (click)="resetForm()">Annulla</button>
+  </div>
+</form>

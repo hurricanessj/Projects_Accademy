@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricava Utenti</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3  justify-content-center">
+                <h1>Utenti</h1>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <button id="caricaListaUtenti" type="button" class="btn btn-info">visualizza utenti</button>
+                    <ul id="listaUtenti">
+                    </ul>
+                </div>
+                <div class="col-5">
+                    <select>
+                        <option value="o">visualizza utenti</option>
+                    </select>
+                    <p id="paragrafo"></p>
+                    <table border="1">
+                        <thead>
+                            <th>informazioni</th>
+                        </thead>
+                        <tbody id="infoTab">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <script>
+
+                $(document).ready(function () {
+
+                    $("#caricaListaUtenti").on("click", function () {
+
+                        $.ajax({
+                            url: " https://jsonplaceholder.typicode.com/users",
+                            method: "GET",
+                            success: function (data) {
+                                $("#listaUtenti").empty();
+                                data.forEach(user => {
+                                    $("#listaUtenti").append(`<li${user.name}>${user.name}</li><br>`)
+                                });
+
+                            },
+                            error: function (error) {
+                                console.error("Errore nella richiesta", error);
+                            }
+                        });
+
+                    });
+
+                    $(document).ready(function () {
+                        $.get(" https://jsonplaceholder.typicode.com/users", function (response) {
+                            response.forEach(element => {
+
+                                $("select").append(`<option value="${element.name}">${element.name} </option>`)
+                            });
+                            $("select").on("change", function () {
+
+
+                                $("#infoTab").append(`<tr><td>${this.value}</td></td>`)
+                            })
+                        })
+                    })
+
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

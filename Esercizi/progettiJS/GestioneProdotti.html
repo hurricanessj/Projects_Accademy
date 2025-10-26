@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Prodotti</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    form, select, table {
+      margin-top: 20px;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestione Prodotti</h1>
+
+    <!-- Form Aggiunta -->
+    <form id="addForm">
+      <input type="text" id="name" placeholder="Nome" required>
+      <input type="text" id="product" placeholder="Prodotto" required>
+      <input type="number" id="price" placeholder="Prezzo" required>
+      <input type="number" id="quantity" placeholder="Quantità" required>
+      <button type="button" onclick="addProduct()">Aggiungi Prodotto</button>
+    </form>
+
+    <!-- Form Ricerca -->
+    <form id="searchForm">
+      <input type="text" id="search" placeholder="Cerca prodotto">
+      <button type="button" onclick="searchProduct()">Cerca</button>
+    </form>
+
+    <!-- Combobox Selezione -->
+    <select id="productSelect">
+      <option value="">-- Seleziona Prodotto --</option>
+    </select>
+    <button onclick="showSelectedProduct()">Visualizza Prodotto</button>
+
+    <!-- Bottone Mostra Tutti -->
+    <button onclick="displayAllProducts()">Visualizza Tutti i Prodotti</button>
+
+    <!-- Tabella -->
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Prodotto</th>
+          <th>Prezzo</th>
+          <th>Quantità</th>
+          <th>Rimuovi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    let products = [
+      { name: "Mario Rossi", product: "Laptop", price: 1200, quantity: 3 },
+      { name: "Giulia Bianchi", product: "Mouse", price: 25, quantity: 10 },
+      { name: "Luca Verdi", product: "Monitor", price: 250, quantity: 5 }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateProductSelect();
+      displayAllProducts();
+    });
+
+    function addProduct() {
+      const name = document.getElementById('name').value;
+      const product = document.getElementById('product').value;
+      const price = parseFloat(document.getElementById('price').value);
+      const quantity = parseInt(document.getElementById('quantity').value);
+
+      if (!name || !product || isNaN(price) || isNaN(quantity)) return;
+
+      products.push({ name, product, price, quantity });
+      updateProductSelect();
+      displayAllProducts();
+      document.getElementById('addForm').reset();
+    }
+
+    function searchProduct() {
+      const searchTerm = document.getElementById('search').value.toLowerCase();
+      const filtered = products.filter(p => p.product.toLowerCase().includes(searchTerm));
+      displayProducts(filtered);
+    }
+
+    function updateProductSelect() {
+      const select = document.getElementById('productSelect');
+      select.innerHTML = '<option value="">-- Seleziona Prodotto --</option>';
+      products.forEach((p, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = p.product;
+        select.appendChild(option);
+      });
+    }
+
+    function showSelectedProduct() {
+      const index = document.getElementById('productSelect').value;
+      if (index !== "") displayProducts([products[index]]);
+    }
+
+    function displayAllProducts() {
+      displayProducts(products);
+    }
+
+    function displayProducts(list) {
+      const tbody = document.getElementById('productTable').querySelector('tbody');
+      tbody.innerHTML = '';
+      list.forEach((p, i) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${p.name}</td>
+          <td>${p.product}</td>
+          <td>€${p.price.toFixed(2)}</td>
+          <td>${p.quantity}</td>
+          <td><button onclick="removeProduct(${i})">Rimuovi</button></td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function removeProduct(index) {
+      products.splice(index, 1);
+      updateProductSelect();
+      displayAllProducts();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Crea un’interfaccia Documento con:
+titolo: string
+autore: string
+
+Crea due classi che implementano Documento:
+Libro
+ con un campo aggiuntivo: numeroPagine: number
+Articolo
+ con un campo aggiuntivo: rivista: string
+Crea una classe generica Archivio<T> con:
+un campo privato contenuto: T
+i metodi:
+set(item: T): void
+get(): T | undefined
+info(): string → che chiama item.info()
+
+Ogni classe (Libro e Articolo) deve implementare un metodo info(): string che restituisce una descrizione testuale.
+Nel main.ts, crea:
+un archivio per Libro
+un archivio per Articolo
+stampa le informazioni usando info()

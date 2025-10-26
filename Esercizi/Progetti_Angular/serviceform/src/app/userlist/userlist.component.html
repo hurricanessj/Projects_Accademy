@@ -1,0 +1,10 @@
+<app-userform (save)="saveUser($event)" [user]="selectedUser"></app-userform>
+
+<ul>
+    <li *ngFor="let user of listaUtenti">
+        {{user.nome}}<br>
+        {{user.email}}<br><br>
+        <button (click)="editUser(user)">edit</button>
+        <button (click)="deleteUser(user.id)">delete</button>
+    </li>
+</ul>

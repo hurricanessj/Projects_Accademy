@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "id": 1, "name": "Pane", "price": 1 },
+
+    { "id": 2, "name": "Latte", "price": 1.5 },
+
+    { "id": 3, "name": "Pasta", "price": 2 }
+  ]
+}
+ 

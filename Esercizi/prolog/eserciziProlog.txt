@@ -1,0 +1,74 @@
+ 
+ 
+
+
+libro(libro1).
+libro(libro2).
+libro(libro3).
+libro(libro4).
+
+tesserato(maria).
+tesserato(giuseppe).
+
+noleggiato(libro1).
+
+
+presta_libro(X, Y) :- libro(X), \+ noleggiato(X), tesserato(Y).
+
+
+
+date 2 persone vogliamo vede se so fratelli
+esercizio 1
+
+genitore(filippo, anna).
+genitore(filippo, carlo).
+genitore(matteo, domenco).
+
+fratelli(X, Y) :- genitore(Z, X), genitore(Z, Y), X \= Y.
+
+
+
+
+dato un numero voglio sape se e pari
+esercizio 2
+pari(N) :- 0 is N mod 2.
+
+
+
+data un uccello voglio sapere se vola
+esercizio3
+
+uccello(civetta).
+uccello(pinguino).
+uccello(gallina).
+uccello(aquila).
+
+non_vola(pinguino).
+non_vola(gallina).
+
+
+vola(X) :- uccello(X), \+ non_vola(X).
+
+
+
+dato un giorno voglio sapere se è un giorno feriale
+esercizio 4
+giorno(lunedi).
+giorno(maertedi).
+giorno(sabato).
+giorno(domenica).
+
+festivo(sabato).
+festivo(domenica).
+
+esercizio 5
+date alcune caratteristiche verificare se l'oggetto che passo è un mammifero o un rettile 
+
+caratteristica(leone, partorisce).
+caratteristica(serpente, fa_le_uova).
+caratteristica(gatto, partorisce).
+caratteristica(coccodrillo, fa_le_uova).
+
+mammifero(X) :- caratteristica(X, partorisce).
+
+rettile(X) :- caratteristica(X, fa_le_uova).

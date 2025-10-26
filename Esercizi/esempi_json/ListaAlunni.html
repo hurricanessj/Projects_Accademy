@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var listaAlunni = ["Enzo", "Marco", "Davide", "Francesca", "Michela"];
+    var maschi = 0;
+    var femmine = 0;
+    for (var i = 0; i < listaAlunni.length; i++) {
+        let nome = listaAlunni[i];
+        let lunghezza = nome.length;
+        if(lunghezza < 7){
+            maschi = maschi + 1;
+        }else{
+            femmine = femmine + 1;
+        }
+    }
+    console.log("I maschi sono: "+ maschi);
+    console.log("Le femmine sono: "+ femmine);
+</script>
+
+</html>

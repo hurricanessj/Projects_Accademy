@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+
+    </p>
+    
+</body>
+<script>
+var cognome ='stringa';
+var n=7;
+if(n>2){
+    //console log sono utilizzati per la visualizzazione dei messaggi in console
+    console.log("true");
+}else{
+    //alert crea un banner di alert con un messaggio
+alert("no");
+}
+
+
+
+function hello(elemento){
+    console.log("questa è una funzione1 "+ elemento);
+    console.log(`questa è una funzione2 ${elemento}`);
+    console.log("ciao 3", elemento);
+}
+hello(n);
+
+function somma(num1, num2){
+    return num1+num2;
+}
+var risultato = somma('1','5');
+alert(risultato); 
+
+function calcolo(op, num1, num2){
+    if(operazione == "somma"){
+        return num1+num2;
+    }else{
+        return num1*num2;
+    }
+}
+
+var somma = calcolo(3 ,4, 'somma');
+var prodotto = calcolo(3 ,4, 'prodotto');
+
+//metodo di visualizzazione
+console.log(calcolo());
+
+/*utilizzare l'operatore ternario e mettere la funzione da dichiarare direttamente nell'alert*/
+var listaDellaSpesa = ['pasta', 'pesto', 'sale'];
+//metodo di visualizzazione di un elemento di un array
+alert(listaDellaSpesa[0]);
+var listaDellaSpesa = ['pasta', 'pesto', 'sale'];
+alert(listaDellaSpesa[0]);
+for(var i=0; i<listaDellaSpesa.length; i++){
+    console.log(listaDellaSpesa[i]);
+}
+
+</script>
+</html>

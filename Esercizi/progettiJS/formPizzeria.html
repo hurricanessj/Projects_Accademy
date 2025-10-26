@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+    creare una pagina html ordini pizzeria. Inserire un form con nome, cognome, pizza, bibita. Al click su ok, svuotare
+il form per consentire l'invio di un nuovo ordine. Quando tutti gli ordini sono completi, cliccare su invio ordine.
+Al click su invio ordine, visualizzare una nuova pagina con una tabella in cui è presente l'ordine o gli ordini effettuati. 
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+</head>
+
+<body>
+        <form id="pizzeria">
+        <label for="fname">Nome:</label><br>
+        <input type="text" id="nome" name="fname"><br><br>
+        <label for="Cognome">Cognome:</label><br>
+        <input type="text" id="cognome" name="cognome"><br><br>
+        <label for="pizza">Pizza:</label><br>
+        <input type="text" id="pizza" name="pizza"><br><br>
+        <label for="bibita">bibita:</label><br>
+        <input type="text" id="bibita" name="bibita"><br><br>
+        <input type="reset" value="aggiungi Ordine" onclick="salvaOrdine()">
+        <input type="button" value="invia Ordine" onclick="inviaOrdine()">
+        </form>
+
+    <script>
+            var listaDaRiempire = [];
+
+        function salvaOrdine() {
+            var nome = document.getElementById("nome").value;
+
+            var cognome = document.getElementById("cognome").value;
+
+            var pizza = document.getElementById("pizza").value;
+
+            var bibita = document.getElementById("bibita").value;
+
+            var lista = { nome: nome, cognome: cognome, pizza: pizza, bibita: bibita }
+
+            listaDaRiempire.push(lista);
+
+            var form = document.getElementById("pizzeria").reset();
+
+            console.log(listaDaRiempire);
+
+        }
+
+        function inviaOrdine() {
+            var stringaJson = JSON.stringify(listaDaRiempire);
+            console.log(stringaJson)
+
+            localStorage.setItem("stringaJson", stringaJson);
+            window.location.href = "VisualizzaOrdiniPizzeria.html"
+        }
+    </script>
+</body>
+
+</html>

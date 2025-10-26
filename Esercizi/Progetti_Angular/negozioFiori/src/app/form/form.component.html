@@ -1,0 +1,54 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-4 border shadow-sm bg-light mx-auto rounded-4"
+  style="max-width: 700px;">
+
+  <h4 class="mb-4 text-center">
+    {{ form.value.id ? 'Modifica Consegna' : 'Aggiungi Consegna' }}
+  </h4>
+
+  <div class="row">
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Nome Destinatario</label>
+      <input type="text" class="form-control" formControlName="name" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Indirizzo</label>
+      <input type="text" class="form-control" formControlName="address" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Prodotto</label>
+      <input type="text" class="form-control" formControlName="product" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Codice Consegna</label>
+      <input type="text" class="form-control" formControlName="deliveryCode" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Data</label>
+      <input type="date" class="form-control" formControlName="date" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Stato</label>
+      <select class="form-select" formControlName="delivered">
+        <option [ngValue]="false">Non Consegnata</option>
+        <option [ngValue]="true">Consegnata</option>
+      </select>
+    </div>
+
+    <div class="mb-3 col-12">
+      <label class="form-label">Dettagli</label>
+      <textarea class="form-control" formControlName="details" rows="3"></textarea>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mt-3">
+    <button type="submit" class="btn btn-primary">
+      {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Consegna
+    </button>
+    <button *ngIf="form.value.id" type="button" class="btn btn-secondary" (click)="resetForm()">Annulla</button>
+  </div>
+</form>

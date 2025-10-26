@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Marco Rossi",
+      "age": 10,
+      "class": "5A"
+    },
+    {
+      "id": "d235",
+      "name": "Giuseppe Gialli",
+      "age": 4,
+      "class": "5F"
+    }
+  ]
+}

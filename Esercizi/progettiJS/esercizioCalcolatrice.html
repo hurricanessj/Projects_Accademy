@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatrice</title>
+</head>
+
+<body>
+    <h1>Scrivi i numeri che vuoi calcolare</h1>
+
+    <form id="calcolatrice">
+        <input type="number" id="n1" name="n1" required><br><br>
+
+        <label for="operazione">Scegli l'operazione</label>
+        <select id="scelta" name="operazione" required>
+            <option value="+" id="addizione">Addizione</option>
+            <option value="-" id="sottrazione">Sottrazione</option>
+            <option value="*" id="moltiplicazione">Moltiplicazione</option>
+            <option value="/" id="divisione">Divisione</option>
+        </select><br><br>
+
+        <input type="number" id="n2" name="n2" required><br><br>
+
+        <button onclick="calcola()"></button>
+    </form>
+
+    <script>
+        document.getElementById("calcolatrice").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            function calcola(){
+                const n1 = document.getElementById("n1").value;
+                const n2 = document.getElementById("n2").value;
+                const scelta = document.getElementById("scelta").value;
+
+                localStorage.setItem("num1", n1);
+                localStorage.setItem("num2", n2);
+                localStorage.setItem("scelta", scelta);
+            }
+            window.location.href = "calcolatrice.html";
+        });
+    </script>
+</body>
+
+</html>

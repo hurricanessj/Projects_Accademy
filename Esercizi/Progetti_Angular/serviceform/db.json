@@ -1,0 +1,19 @@
+{
+  "utenti": [
+    {
+      "id": 1,
+      "nome": "Mario Rossi",
+      "email": "mario.rossi@example.com"
+    },
+    {
+      "id": 2,
+      "nome": "Anna Bianchi",
+      "email": "anna.bianchi@example.com"
+    },
+    {
+      "id": 3,
+      "nome": "Luca rossi",
+      "email": "luca.verdi@example.com"
+    }
+  ]
+}

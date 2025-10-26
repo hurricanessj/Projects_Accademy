@@ -1,0 +1,54 @@
+<div>
+  <header id="header" class="py-4 mb-4 shadow-sm">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <h1 class="h3 mb-0">Lista Eventi</h1>
+      <button (click)="logout()" class="btn btn-danger float-end">Logout</button>
+
+    </div>
+  </header>
+
+  <div class="container mt-4">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Cerca per nome, tipo o città"
+               [(ngModel)]="termineRicerca">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let evento of filtraEventi()">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ evento.name }}</h5>
+            <p class="card-text"><strong>Tipo:</strong> {{ evento.type }}</p>
+            <p class="card-text"><strong>Città:</strong> {{ evento.city }}</p>
+            <p class="card-text"><strong>Data:</strong> {{ evento.date | date: 'longDate' }}</p>
+            <p class="card-text"><strong>Creato da:</strong> {{ evento.createdBy }}</p>
+          </div>
+
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-sm btn-outline-primary"  *ngIf="isAdmin()" (click)="editEvento(evento)">Modifica</button>
+            <button class="btn btn-sm btn-outline-danger"  *ngIf="isAdmin()" (click)="deleteEvento(evento.id)">Elimina</button>
+           <!--
+            <button class="btn btn-sm btn-outline-secondary" (click)="mostraDettagli(evento)">Dettagli</button>
+            --> 
+          </div>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="row">
+      <div class="col-md-12 mb-5">
+                <app-dettaglio-evento *ngIf="eventoDettaglio"[evento]="eventoDettaglio"(chiudiDettagli)="eventoDettaglio = null">   </app-dettaglio-evento> 
+      </div>
+    </div>
+-->
+
+    <div class="row mb-4 mt-2"  *ngIf="isAdmin()">
+      <div class="col-12">
+        <app-formevento  (save)="saveEvento($event)" [evento]="eventoSelezionato">
+        </app-formevento>
+      </div>
+    </div>
+  </div>
+</div>

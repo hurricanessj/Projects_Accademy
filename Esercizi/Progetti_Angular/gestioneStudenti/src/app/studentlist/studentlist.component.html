@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let student of students">
+        {{student.name}} - {{student.class}}
+        <button type="button" (click)="delete(student.id)"> elimina</button>
+        <button type="button" (click)="select(student)">modifica</button>
+        <button type="button" (click)="add()">add</button>
+    </li>
+</ul>
+<app-from [selectedStudent]="selectedStudent"></app-from>

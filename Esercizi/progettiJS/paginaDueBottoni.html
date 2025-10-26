@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due bottoni</title>
+</head>
+
+<body>
+    <button onclick="CreaParagrafo()">paragrafo</button>
+    <button onclick="cambiaColore()">colora paragrafo</button>
+    <div id="idParagrafo">
+    </div>
+</body>
+<script>
+    function CreaParagrafo() {
+        var txt = "paragrafo da inserire";
+        var par = document.createElement('p');
+        var nod = document.createTextNode(txt);
+        par.appendChild(nod);
+
+        var div = document.getElementById("idParagrafo");
+        div.appendChild(nod);
+    }
+
+    function cambiaColore() {
+        document.getElementById("idParagrafo").style.background = "red";
+    }
+
+</script>
+
+</html>

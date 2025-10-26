@@ -1,0 +1,11 @@
+<div class="container my-4">
+  <h2 class="mb-3">Seleziona il colore di background:</h2>
+
+  <input type="color" [value]="coloreSelezionato" (input)="cambiaColore($event)"
+    class="form-control form-control-color mb-4" />
+
+  <app-chisiamo></app-chisiamo><br>
+  <app-gallery></app-gallery><br>
+  <app-contattaci></app-contattaci><br>
+  
+</div>

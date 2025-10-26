@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <button id="caricaDati">Carica Dati</button>
+    <ul id="listaUtenti">
+
+    </ul>
+    <script>
+        $(document).ready(function () {
+            $("#caricaDati").on("click", function () {
+
+
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/users",
+                    method: "GET",
+
+                    success: function (data) {
+                        data.forEach(link => {
+                            $("#listaUtenti").append(`<li>${link.name}</li>`)
+                        })
+                        //console.log("dati ricevuti: ", data)
+                    },
+
+                    error: function (error) {
+                        console.error("errore nella richiesta", error)
+                    }
+
+
+                })
+
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

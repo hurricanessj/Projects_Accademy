@@ -1,0 +1,16 @@
+<form #myForm="ngForm" (ngSubmit)="mtSubmit(myForm)">
+    <input type="text" [(ngModel)]="utente.nome">
+    <button type="submit">invia</button>
+</form>
+
+<form [formGroup]="setForm" (submit)="onSubmit()">
+    <input type="text" formControlName="nome">
+    <div>
+        <p *ngIf="setForm.get('nome')?.invalid">inserisci nome</p>
+    </div>
+    <input type="email" formControlName="email">
+    <div>
+        <p *ngIf="setForm.get('email')?.invalid">aggiungi email</p>
+    </div>
+    <button type="submit" [disabled]="setForm.invalid">invia</button>
+</form>

@@ -1,0 +1,52 @@
+[
+      {
+        "id": "1",
+        "nome": "IL ritorno del re",
+        "loc": "imgIlRitorno.jpg"
+      },
+
+            {
+        "id": "2",
+        "nome": "Matrix Resurrections",
+        "loc": "imgMatrix.jpg"
+      },
+
+            {
+        "id": "3",
+        "nome": "Interstellar",
+        "loc": "imgInterstellar.jpg"
+      },
+            {
+        "id": "4",
+        "nome": "Oppenheimer",
+        "loc": "imgOppenheimer.jpg"
+      },
+
+            {
+        "id": "5",
+        "nome": "dune",
+        "loc": "imgDune.jpg"
+      },
+
+            {
+        "id": "6",
+        "nome": "Avatar 3",
+        "loc": "imgAvatar.jpg"
+      },
+
+            {
+        "id": "7",
+        "nome": "inception",
+        "loc": "imgIncep.jpg"
+      },
+
+            {
+        "id": "8",
+        "nome": "the batman",
+        "loc": "imgthebatman.jpg"
+      }
+      
+    ]
+
+
+  

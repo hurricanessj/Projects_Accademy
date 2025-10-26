@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div *ngIf="!authService.getIsLoggedIn(); else loggedIn" class="card p-4 shadow" style="width: 22rem;">
+    <h2 class="text-center  mb-4">Login</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      </div>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Login</button>
+    </form>
+  </div>
+</div>
+
+<ng-template #loggedIn>
+  <div class="text-center mt-4">
+    <a *ngIf="authService.getRole() == 'admin'" routerLink="/admin" class="btn btn-success me-2">Vai a home admin</a>
+    <a *ngIf="authService.getRole() == 'user'" routerLink="/user" class="btn btn-info">Vai a home user</a>
+  </div>
+</ng-template>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ricerca Meteo</title>
+</head>
+
+<body>
+    <h1>il meteo di una citta</h1>
+    <input type="text" id="citta" placeholder="inserisci una citta">
+    <button id="cerca">Cerca Meteo</button>
+
+    <script>
+        document.getElementById("cerca").addEventListener("click", function () {
+            const citta = document.getElementById("citta").value;
+            if (citta) {
+                window.location.href = `dettagliMeteo.html?citta=${citta}`;
+            } else {
+                alert("Inserisci una città.");
+            }
+        });
+    </script>
+</body>
+
+</html>

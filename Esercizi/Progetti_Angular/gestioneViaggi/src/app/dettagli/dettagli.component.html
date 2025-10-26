@@ -1,0 +1,10 @@
+<div class="card mt-4" *ngIf="prenotazione">
+  <div class="card-body">
+    <h5 class="card-title">Dettagli Prenotazione</h5>
+    <p><strong>Nome:</strong> {{ prenotazione.firstName }}</p>
+    <p><strong>Email:</strong> {{ prenotazione.email }}</p>
+    <p><strong>Meta:</strong> {{ prenotazione.meta.nome }}</p>
+    <p><strong>Numero di Persone:</strong> {{ prenotazione.numeroPersone }}</p>
+    <p><strong>Costo Totale:</strong> €{{ prenotazione.costoTotale }}</p>
+  </div>
+</div>

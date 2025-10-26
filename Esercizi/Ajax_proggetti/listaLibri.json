@@ -1,0 +1,59 @@
+[
+    {
+      "titolo": "1984",
+      "autore": "George Orwell",
+      "genere": "Distopico",
+      "anno": 1949,
+      "immagine": "imgOrwell.jpg"
+    },
+    {
+      "titolo": "Il nome della rosa",
+      "autore": "Umberto Eco",
+      "genere": "Storico",
+      "anno": 1980,
+      "immagine": "imgNomeDellaRosa.jpg"
+    },
+    {
+      "titolo": "Il signore degli anelli",
+      "autore": "J.R.R. Tolkien",
+      "genere": "Fantasy",
+      "anno": 1954,
+      "immagine": "imgSignoreAnelli.jpg"
+    },
+    {
+      "titolo": "Orgoglio e pregiudizio",
+      "autore": "Jane Austen",
+      "genere": "Romantico",
+      "anno": 1813,
+      "immagine": "imgOrgoglioPregiudizio.jpg"
+    },
+    {
+      "titolo": "Il grande Gatsby",
+      "autore": "F. Scott Fitzgerald",
+      "genere": "Classico",
+      "anno": 1925,
+      "immagine": "imgGatsby.jpg"
+    },
+    {
+      "titolo": "La metamorfosi",
+      "autore": "Franz Kafka",
+      "genere": "Esistenzialismo",
+      "anno": 1915,
+      "immagine": "imgMetamorfosi.jpg"
+    },
+    {
+      "titolo": "Il piccolo principe",
+      "autore": "Antoine de Saint-Exupéry",
+      "genere": "Fiaba filosofica",
+      "anno": 1943,
+      "immagine": "imgPiccoloPrincipe.jpg"
+    },
+    {
+      "titolo": "Delitto e castigo",
+      "autore": "Fëdor Dostoevskij",
+      "genere": "Romanzo psicologico",
+      "anno": 1866,
+      "immagine": "imgDelittoCastigo.jpg"
+    }
+  ]
+  

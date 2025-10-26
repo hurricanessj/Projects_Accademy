@@ -1,0 +1,14 @@
+<div class="d-flex flex-column min-vh-100">
+    <form #ProductForm='ngForm' class="d-grid offset-4 col-4 mt-5" style=" border: 1px lightgray;
+    border-radius: 25px;">
+        <label for="title">titolo: </label>
+        <input type="text" [(ngModel)]="prodotto.title" name="title">
+        <label for="description">description: </label>
+        <input type="text" [(ngModel)]="prodotto.description" name="description">
+        <label for="category">Categoria: </label>
+        <input type="text" [(ngModel)]="prodotto.category" name="category">
+        <label for="price">prezzo: </label>
+        <input type="text" [(ngModel)]="prodotto.price" name="price">
+        <button type="button" class="btn btn-primary mt-4" (click)="onCreate(ProductForm.value)">clicca</button>
+    </form>
+</div>

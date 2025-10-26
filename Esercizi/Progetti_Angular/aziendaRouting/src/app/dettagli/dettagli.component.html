@@ -1,0 +1,9 @@
+<div class="container py-5" *ngIf="immagine">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">{{ immagine.titolo }}</h2>
+    <p class="text-muted">{{ immagine.descrizione }}</p>
+  </div>
+  <div class="text-center">
+    <img [src]="immagine.src" class="img-fluid rounded shadow" alt="{{ immagine.titolo }}">
+  </div>
+</div>

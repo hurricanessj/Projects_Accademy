@@ -1,0 +1,37 @@
+{
+  "opere": [
+    {
+      "id": "1",
+      "titolo": "La Gioconda",
+      "autore": "Leonardo da Vinci",
+      "stanza": "Sala Rinascimento",
+      "paeseOrigine": "Italia",
+      "dataRealizzazione": "1503-01-01",
+      "stato": "esposta",
+      "immagine": "imgGioconda.jpg",
+      "descrizione": "La Gioconda, nota anche come Monna Lisa, è forse il dipinto più famoso al mondo. Realizzata da Leonardo da Vinci nel 1503,raffigura una donna con un enigmatico sorriso, ambientata su uno sfondo paesaggistico sfumato. La sua espressione ambigua, il magistrale uso dello sfumato e l'equilibrio compositivo ne fanno un capolavoro assoluto del Rinascimento. Ospitata nella Sala Rinascimento, rappresenta l’apice dell’arte leonardiana e della ritrattistica italiana del Cinquecento."
+    },
+    {
+      "id": "2",
+      "titolo": "L'Ultima Cena",
+      "autore": "Leonardo da Vinci",
+      "stanza": "Laboratorio Restauro",
+      "paeseOrigine": "Italia",
+      "dataRealizzazione": "1495-01-01",
+      "stato": "in restauro",
+      "immagine": "imgUc.png",
+      "descrizione": "L’Ultima Cena è un affresco monumentale realizzato tra il 1495 e il 1498 nel refettorio di Santa Maria delle Grazie a Milano. Dipinge il momento in cui Cristo annuncia il tradimento di uno degli apostoli, catturando con grande intensità emotiva le reazioni individuali. Attualmente collocata nel Laboratorio Restauro, l’opera è sottoposta a delicati interventi conservativi a causa della fragilità tecnica della pittura murale. Questo capolavoro rivoluzionò la pittura sacra con una narrazione dinamica e profonda."
+    },
+    {
+      "id": "3",
+      "titolo": "Notte Stellata",
+      "autore": "Vincent van Gogh",
+      "stanza": "Galleria Moderna",
+      "paeseOrigine": "Paesi Bassi",
+      "dataRealizzazione": "1889-06-01",
+      "stato": "esposta",
+      "immagine": "imgVangogh.jpg",
+      "descrizione": "Notte Stellata, realizzata nel giugno 1889, è una delle opere più iconiche di Vincent van Gogh. Ritrae un paesaggio notturno immaginario, visto dalla finestra della sua stanza nell’ospedale psichiatrico di Saint-Rémy-de-Provence. Il cielo è turbolento, animato da vortici di luce e stelle palpitanti, esprimendo uno stato d’animo tormentato e visionario. Esposta nella Galleria Moderna, quest’opera rappresenta il culmine dell’espressionismo post-impressionista e rivela la straordinaria interiorità del pittore olandese."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+
+<body class="bg-light">
+
+    <h3 class="text-center mt-5">Quiz</h3>
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="card text-center rounded-5 shadow-lg" style="width: 22em;">
+            <div class="card-body">
+                <h4 class="card-title" id="categoria"></h4>
+                <h6 class="card-subtitle mb-2 text-muted" id="difficolta"></h6>
+                <p class="card-text mt-4 fw-bold" id="domanda"></p>
+                <div class="mt-4">
+                    <button class="btn btn-success me-2" id="btnVero">Vero</button>
+                    <button class="btn btn-danger me-2" id="btnFalso">Falso</button>
+                    <button class="btn btn-primary" id="avviaQuiz">Avvia Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let domande = [];
+        let indice = 0;
+        let punteggio = 0;
+
+        $(document).ready(function () {
+
+            $('#categoria, #difficolta, #domanda, #btnVero, #btnFalso').hide();
+
+            $("#avviaQuiz").on("click", function () { 
+                $.ajax({
+                    url: `https://opentdb.com/api.php?amount=10&type=boolean`,
+                    method: "GET",
+                    success: function (dati) {
+                        domande = dati.results;
+                        $('#btnVero, #btnFalso, #categoria, #difficolta, #domanda').show();
+                        $('#avviaQuiz').hide();
+
+                        mostraDomanda(indice);
+                    },
+                    error: function () {
+                        alert("Errore nel caricamento delle domande.");
+                    }
+                });
+            });
+
+            function mostraDomanda(i) {
+                if (i < domande.length) {
+                    const domanda = domande[i];
+                    $('#categoria').html("Categoria: " + domanda.category);
+                    $('#difficolta').html("Difficoltà: " + domanda.difficulty);
+                    $('#domanda').html(domanda.question);
+                } else {
+                    alert("Quiz completato! Hai totalizzato " + punteggio + " punti su " + domande.length + ".");
+                    $('#btnVero, #btnFalso').hide();
+                }
+            }
+
+            $("#btnVero, #btnFalso").on("click", function () {
+                const rispostaUtente = $(this).text();
+                const rispostaCorretta = domande[indice].correct_answer;
+
+                const eCorretta = (rispostaUtente === "Vero" && rispostaCorretta === "True") ||
+                                  (rispostaUtente === "Falso" && rispostaCorretta === "False");
+
+                if (eCorretta) {
+                    punteggio++;
+                    alert("Risposta corretta!");
+                } else {
+                    alert("Risposta sbagliata!");
+                }
+
+                indice++;
+                setTimeout(() => {
+                    mostraDomanda(indice);
+                }, );
+            });
+        });
+    </script>
+
+</body>
+
+</html>

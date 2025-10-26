@@ -1,0 +1,46 @@
+{"pois":[
+  {
+    "id": 1,
+    "name": "Colosseo",
+    "category": "Monumento storico",
+    "description": "Anfiteatro romano nel centro di Roma, simbolo della città.",
+    "latitude": 41.8902,
+    "longitude": 12.4922,
+    "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italia",
+    "opening_hours": "08:30-19:00",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Museo Egizio",
+    "category": "Museo",
+    "description": "Uno dei più importanti musei al mondo dedicati all'antico Egitto.",
+    "latitude": 45.0703,
+    "longitude": 7.6869,
+    "address": "Via Accademia delle Scienze, 6, 10123 Torino TO, Italia",
+    "opening_hours": "09:00-18:30",
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "name": "Galleria degli Uffizi",
+    "category": "Museo",
+    "description": "Celebre museo d'arte rinascimentale a Firenze.",
+    "latitude": 43.7678,
+    "longitude": 11.2556,
+    "address": "Piazzale degli Uffizi, 6, 50122 Firenze FI, Italia",
+    "opening_hours": "08:15-18:50",
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Lago di Como",
+    "category": "Attrazione naturale",
+    "description": "Lago alpino circondato da montagne e borghi pittoreschi.",
+    "latitude": 46.0167,
+    "longitude": 9.2667,
+    "address": "Lago di Como, Lombardia, Italia",
+    "opening_hours": "Sempre accessibile",
+    "rating": 4.9
+  }
+]}

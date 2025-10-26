@@ -1,0 +1,23 @@
+<app-formlibri  (save)="saveBook($event)" [book]="selectedBook"></app-formlibri>
+<div class="projects-container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let lib of bookList">
+      <div class="card project-card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title text-success">{{ lib.title }}</h4>
+          <p class="card-text">{{ lib.description }}</p>
+          <p class="card-text">
+            <strong>Descrizione: </strong> 
+            <br>{{ lib.description }}
+          </p>
+          <br>
+          <div *ngIf="authService.getRole() == 'admin'" class="d-flex gap-2">
+            <button class="btn btn-outline-success btn-sm" (click)="editBook(lib)">Modifica</button>
+            <button class="btn btn-outline-danger btn-sm" (click)="deleteBook(lib.id)">Elimina</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-listuser-status></app-listuser-status>

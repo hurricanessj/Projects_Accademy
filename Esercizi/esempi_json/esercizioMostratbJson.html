@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    nome
+                </th>
+                <th>
+                    cognome
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+    
+
+    <script>
+        var lista = [
+        { "nome": "Mario", "cognome": "Rossi" },
+        { "nome": "Luca", "cognome": "Bianchi" }
+        ]
+
+        var table = document.getElementById("table");
+        lista.forEach(elem =>{
+            table.innerHTML += `<tr><td>${elem.nome}</td><td>${elem.cognome}</td></tr>`
+        })
+    </script>
+</body>
+</html>

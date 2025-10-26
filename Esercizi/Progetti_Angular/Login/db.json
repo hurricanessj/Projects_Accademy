@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "nome": "Anna",
+            "cognome": "Admin",
+            "email": "admin@mail.com",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "nome": "Luca",
+            "cognome": "Bianchi",
+            "email": "luca@mail.com",
+            "password": "pwd123",
+            "role": "candidato"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "farmaci": [
+    {
+      "id": "1",
+      "nome": "Paracetamolooooo",
+      "principioAttivo": "Paracetamolo",
+      "quantita": 20
+    },
+    {
+      "id": "ddc1",
+      "nome": "aspirina",
+      "principioAttivo": "aspirina",
+      "quantita": 40
+    },
+    {
+      "id": "1318",
+      "nome": "tachipirina",
+      "principioAttivo": "tachipirina",
+      "quantita": 30
+    },
+    {
+      "id": "7f09",
+      "nome": "prova",
+      "principioAttivo": "prova2",
+      "quantita": 22
+    }
+  ]
+}

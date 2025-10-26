@@ -1,0 +1,42 @@
+
+<h1>VideoGames</h1>
+
+
+<h2 *ngIf="!id">Aggiungi Videogiochi</h2>
+<form [formGroup]="gameForm" (ngSubmit)="addVideogame()" *ngIf="!id">
+  <label>Nome:</label>
+  <input type="text" formControlName="gameName">
+
+  <label>Genere:</label>
+  <input type="text" formControlName="genere">
+
+  <label>Piattaforma:</label>
+  <input type="text" formControlName="piattaforma">
+
+  <label>Data rilascio: </label>
+  <input type="date" formControlName="data">
+
+  <button type="submit" [disabled]="gameForm.invalid">invia</button>
+</form>
+
+<form #formVideogame="ngForm" (ngSubmit)="updateVidegame()" *ngIf="id && game"> 
+
+<h2 >Modifica Videogioco</h2>
+    <label>Nome:</label>
+    <input #nome [(ngModel)]="game.nome" type="text" name="nome"required minlength="3">
+    <div *ngIf="nome.value.length < 3">
+        inserisci almeno 3 caratteri
+    </div>
+
+    <label>Genere:</label>
+    <input  #genere [(ngModel)]="game.genere" type="text" formControlName="genere">
+
+    <label>Piattaforma:</label>
+    <input  #piattaforma [(ngModel)]="game.piattaforma" type="text" formControlName="piattaforma">
+
+    <label>Data rilascio: </label>
+    <input  #datarilascio [(ngModel)]="game.dataRilascio" type="date" formControlName="data">
+
+    <button type="submit" >invia</button>
+
+</form>

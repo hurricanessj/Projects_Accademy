@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negozi</title>
+</head>
+<body>
+    <h2>Prima pagina</h2> 
+        <label for="nome">inserisci  il nome</label><br>
+        <input type="text" id="nome"><br>
+        <label for="cognome">inserisci il cognome</label><br>
+        <input type="text" id="cognome"><br>
+        <label for="citta">inserisci la citta</label><br>
+        <input type="text" id="citta" required="^(Roma|Napoli|roma|napoli)$"><br>
+        <input type="submit" onclick="salvaCitta()">
+
+    <script>
+        function salvaCitta(){
+       var nome = document.getElementById("nome").value;
+        localStorage.setItem("nome", nome);
+    
+        var cognome = document.getElementById("cognome").value;
+        localStorage.setItem("cognome", cognome);
+    
+        var citta = document.getElementById("citta").value;
+        localStorage.setItem("citta", citta);
+        
+        window.location.href = "NegoziRomaNapoli.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!--<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mat-elevation-z2 p-4" style="max-width: 600px; margin: 20px auto;">
+  <mat-card>
+    <mat-card-title>{{ form.value.id ? 'Modifica Opera' : 'Aggiungi Opera' }}</mat-card-title>
+    <mat-card-content>
+      <div class="row">
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Titolo</mat-label>
+          <input matInput formControlName="titolo" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Autore</mat-label>
+          <input matInput formControlName="autore" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Stanza</mat-label>
+          <input matInput formControlName="stanza" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Paese di Origine</mat-label>
+          <input matInput formControlName="paeseOrigine" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Data di Realizzazione</mat-label>
+          <input matInput formControlName="dataRealizzazione" type="date" required>
+        </mat-form-field>
+
+        <mat-form-field class="col-md-6 col-12 px-2" appearance="fill">
+          <mat-label>Stato</mat-label>
+          <mat-select formControlName="stato" required>
+            <mat-option value="esposta">Esposta</mat-option>
+            <mat-option value="in restauro">In Restauro</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-between mt-3">
+      <button mat-flat-button color="primary" type="submit">
+        {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Opera
+      </button>
+      <button *ngIf="form.value.id" mat-stroked-button color="warn" type="button" (click)="resetForm()">
+        Annulla
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>-->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-4 border shadow-sm bg-light mx-auto rounded-4"
+  style="max-width: 700px;">
+  <h4 class="mb-4 text-center">{{ form.value.id ? 'Modifica Opera' : 'Aggiungi Opera' }}</h4>
+
+  <div class="row rounded-4" id="formColor">
+    <div class="mb-3 col-md-6">
+      <label for="titolo" class="form-label">Titolo</label>
+      <input type="text" class="form-control" formControlName="titolo" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label for="autore" class="form-label">Autore</label>
+      <input type="text" class="form-control" formControlName="autore" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label for="stanza" class="form-label">Stanza</label>
+      <input type="text" class="form-control" formControlName="stanza" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label for="paeseOrigine" class="form-label">Paese di Origine</label>
+      <input type="text" class="form-control" formControlName="paeseOrigine" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label for="dataRealizzazione" class="form-label">Data di Realizzazione</label>
+      <input type="date" class="form-control" formControlName="dataRealizzazione" required>
+    </div>
+
+    <div class="mb-3 col-md-6">
+      <label for="stato" class="form-label">Stato</label>
+      <select class="form-select" formControlName="stato" required>
+        <option value="">-- Seleziona --</option>
+        <option value="esposta">Esposta</option>
+        <option value="in restauro">In Restauro</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <button type="submit" class="btn btn-info">
+      {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Opera
+    </button>
+    <button *ngIf="form.value.id" type="button" class="btn btn-danger" (click)="resetForm()">Annulla</button>
+  </div>
+</form>

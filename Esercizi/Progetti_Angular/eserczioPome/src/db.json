@@ -1,0 +1,169 @@
+{
+
+  "libri": [
+
+    {
+
+      "id": 1,
+
+      "titolo": "Il Signore degli Anelli",
+
+      "descrizione": "Un'epica storia fantasy ambientata nella Terra di Mezzo.",
+
+      "nCopieVendute": 150000000,
+
+      "valutazione": 4.9,
+
+      "img": "https://example.com/immagini/lotr.jpg"
+
+    },
+
+    {
+
+      "id": 2,
+
+      "titolo": "1984",
+
+      "descrizione": "Un romanzo distopico che esplora la sorveglianza e il totalitarismo.",
+
+      "nCopieVendute": 30000000,
+
+      "valutazione": 4.7,
+
+      "img": "https://example.com/immagini/1984.jpg"
+
+    },
+
+    {
+
+      "id": 3,
+
+      "titolo": "Il Piccolo Principe",
+
+      "descrizione": "Un racconto filosofico e poetico per tutte le età.",
+
+      "nCopieVendute": 140000000,
+
+      "valutazione": 4.8,
+
+      "img": "https://example.com/immagini/principe.jpg"
+
+    },
+
+    {
+
+      "id": 4,
+
+      "titolo": "Harry Potter e la Pietra Filosofale",
+
+      "descrizione": "Il primo libro della saga del giovane mago.",
+
+      "nCopieVendute": 120000000,
+
+      "valutazione": 4.9,
+
+      "img": "https://example.com/immagini/hp1.jpg"
+
+    },
+
+    {
+
+      "id": 5,
+
+      "titolo": "Orgoglio e Pregiudizio",
+
+      "descrizione": "Una storia d'amore e critica sociale nell'Inghilterra del XIX secolo.",
+
+      "nCopieVendute": 20000000,
+
+      "valutazione": 4.6,
+
+      "img": "https://example.com/immagini/pride.jpg"
+
+    },
+
+    {
+
+      "id": 6,
+
+      "titolo": "Moby Dick",
+
+      "descrizione": "La caccia ossessiva al capodoglio bianco.",
+
+      "nCopieVendute": 10000000,
+
+      "valutazione": 4.3,
+
+      "img": "https://example.com/immagini/moby.jpg"
+
+    },
+
+    {
+
+      "id": 7,
+
+      "titolo": "Il Nome della Rosa",
+
+      "descrizione": "Un giallo medievale pieno di misteri e intrighi.",
+
+      "nCopieVendute": 5000000,
+
+      "valutazione": 4.5,
+
+      "img": "https://example.com/immagini/rosa.jpg"
+
+    },
+
+    {
+
+      "id": 8,
+
+      "titolo": "Il Codice da Vinci",
+
+      "descrizione": "Un thriller avvincente tra arte e religione.",
+
+      "nCopieVendute": 80000000,
+
+      "valutazione": 4.2,
+
+      "img": "https://example.com/immagini/davinci.jpg"
+
+    },
+
+    {
+
+      "id": 9,
+
+      "titolo": "Cento Anni di Solitudine",
+
+      "descrizione": "Una saga familiare intrisa di realismo magico.",
+
+      "nCopieVendute": 30000000,
+
+      "valutazione": 4.6,
+
+      "img": "https://example.com/immagini/solitudine.jpg"
+
+    },
+
+    {
+
+      "id": 10,
+
+      "titolo": "Don Chisciotte della Mancia",
+
+      "descrizione": "Le avventure tragicomiche di un cavaliere errante.",
+
+      "nCopieVendute": 50000000,
+
+      "valutazione": 4.4,
+
+      "img": "https://example.com/immagini/chisciotte.jpg"
+
+    }
+
+  ]
+
+}
+
+ 

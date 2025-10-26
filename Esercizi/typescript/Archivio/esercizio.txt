@@ -1,0 +1,18 @@
+1️⃣ Crea un’interfaccia:
+interface Archivable {
+    getId(): number;
+    getTitle(): string;
+}
+2️⃣ Crea una classe generica:
+class Archive<T extends Archivable>
+✅ Deve avere:
+Proprietà privata documents: T[].
+Metodo addDocument(doc: T): void.
+Metodo getDocumentById(id: number): T | undefined.
+Metodo listTitles(): string[].
+3️⃣ Definisci due tipi:
+Report (con getId(), getTitle(), content: string).
+Invoice (con getId(), getTitle(), amount: number).
+4️⃣ Usa la classe Archive per:
+Aggiungere almeno due Report e due Invoice.
+Stampare tutti i titoli.

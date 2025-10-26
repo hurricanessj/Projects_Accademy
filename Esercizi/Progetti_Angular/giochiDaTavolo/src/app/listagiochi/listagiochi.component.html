@@ -1,0 +1,40 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">nome</th>
+      <th scope="col">giocatori minimi</th>
+      <th scope="col">giocatori massimi</th>
+      <th scope="col">durata</th>
+      <th scope="col">eta minima</th>
+      <th scope="col">categoria</th>
+      <th scope="col">editore</th>
+      <th scope="col">anno di publicazione</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gioco of listBoardGames">
+      <td>{{ gioco.id }}</td>
+      <td>{{ gioco.nome }}</td>
+      <td>{{ gioco.giocatori_min }}</td>
+      <td>{{ gioco.giocatori_max }}</td>
+      <td>{{ gioco.durata_minuti }}</td>
+      <td>{{ gioco.eta_minima }}</td>
+      <td>{{ gioco.categoria }}</td>
+      <td>{{ gioco.editore }}</td>
+      <td>{{ gioco.anno_pubblicazione }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<form [formGroup]="boardGgameForm" (ngSubmit)="boardGgameForm.value">
+  <label>Nome:
+    <input type="text" formControlName="nome">
+    <label>Email:
+      <input type="email" formControlName="email">
+      <button type="submit">invia</button>
+    </label>
+  </label>
+</form>

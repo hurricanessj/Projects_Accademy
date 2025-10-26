@@ -1,0 +1,5 @@
+<app-form #formRef></app-form>
+
+<button class="btn btn-success mt-3" (click)="mostraDettagli()">Mostra Dettagli</button>
+
+<app-dettagli *ngIf="prenotazione" [prenotazione]="prenotazione"></app-dettagli>

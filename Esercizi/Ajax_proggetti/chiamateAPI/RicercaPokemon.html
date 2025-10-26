@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ricerca Pokemon</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .loader {
+            height: 80px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .loader::before,
+        .loader::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            transform-origin: bottom;
+        }
+
+        .loader::after {
+            background: radial-gradient(at 75% 15%, #fffb, #0000 35%),
+                radial-gradient(at 80% 40%, #0000, #0008),
+                radial-gradient(circle 5px, #fff 94%, #0000),
+                radial-gradient(circle 10px, #000 94%, #0000),
+                linear-gradient(#F93318 0 0) top /100% calc(50% - 5px),
+                linear-gradient(#fff 0 0) bottom/100% calc(50% - 5px) #000;
+            background-repeat: no-repeat;
+            animation: l20 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
+        }
+
+        .loader::before {
+            background: #ddd;
+            filter: blur(8px);
+            transform: scaleY(0.4) translate(-13px, 0px);
+        }
+
+        @keyframes l20 {
+
+            30%,
+            70% {
+                transform: rotate(0deg)
+            }
+
+            49.99% {
+                transform: rotate(0.2deg)
+            }
+
+            50% {
+                transform: rotate(-0.2deg)
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4">
+    <nav class="navbar navbar-light bg-light">
+        <input class="form-control me-2" type="search" placeholder="Cerca Pokémon" id="inPokemon">
+        <button class="btn btn-outline-success mt-2" id="cercaPokemon">Cerca</button>
+    </nav>
+
+    <div class="loader" id="loader"></div>
+
+    <div id="cardPokemon">
+
+        <div class="card" id="cardImg" style="width: 18rem;">
+        </div>
+            <!--img-->
+
+        <div id="cardBody" class="card-body">
+            <!--imfo-->
+        </div>
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#cercaPokemon").on("click", function (e) {
+                e.preventDefault();
+
+                const nomePokemon = $("#inPokemon").val().toLowerCase();
+
+                $.ajax({
+                    url: `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`,
+                    method: "GET",
+                    success: function (data) {
+                        $("#loader").show();
+                        $("#cardImg").empty();
+                        $("#cardBody").empty();
+                        $("#cardImg").append(` <img class="card-img-top" src="${data.sprites.front_default}">`);
+                        $("#cardBody").append(`<h5 class="card-title">Nome Pokémon: <strong>${data.name}</strong></h5>`);
+                        $("#cardBody").append(`<p class="card-text">Altezza Pokémon: <strong>${data.height}</strong></p>`);
+                        $("#cardBody").append(`<p class="card-text">Peso Pokémon: <strong>${data.weight}</strong></p>`);
+                        $("#cardBody").append(`<audio controls> <source src="${data.cries.latest}" type="audio/ogg"> </audio>`);
+                        $("#loader").hide();
+
+                    },
+
+                    error: function () {
+                        $("#visNome").html(`<p class="text-danger">Pokémon non trovato</p>`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

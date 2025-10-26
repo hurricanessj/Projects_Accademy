@@ -1,0 +1,3 @@
+<select [(ngModel)]="coloreSelezionato" (ngModelChange)="cambiaColore()">
+    <option *ngFor="let colore of colori" [value]="colore">{{colore}}</option>
+</select>

@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="titolo" required>
+    <input type="text" formControlName="descrizione" required>
+    <input type="text" formControlName="stato" required>
+    <button type="submit"> {{form.value.id ? 'update' : 'add'}} task</button>
+    <button type="button" *ngIf="form.value.id" (click)="resetForm()">cancel</button>
+</form>

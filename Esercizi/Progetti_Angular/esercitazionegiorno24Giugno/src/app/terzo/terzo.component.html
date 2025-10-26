@@ -1,0 +1,10 @@
+<br>
+<select name="lidi" [(ngModel)]="selectLido">
+    <option *ngFor="let lido of listaLidi" [ngValue]="lido">{{lido.nome}}</option>
+</select>
+<select  name="extra" [(ngModel)]="selectExtra">
+    <option  *ngFor="let e of listaExtra" [ngValue]="e">{{e.extra}}</option>
+</select>
+
+<input type="number" [(ngModel)]="numeroExtra" placeholder="quantita">
+<button (click)="calcoloPreventivo()">visualizza Preventivo</button>

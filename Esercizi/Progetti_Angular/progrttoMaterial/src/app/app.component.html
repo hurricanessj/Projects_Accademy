@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+
+
+<nav [ngClass]="currentTheme + '-navbar'">  
+
+  <mat-button-toggle-group
+  #themeToggle="matButtonToggleGroup"
+  name="themeToggle"
+  [value]="currentTheme"
+  (change)="onThemeToggle(themeToggle.value)">
+  <mat-button-toggle value="light"><mat-icon>wb_sunny</mat-icon> </mat-button-toggle>
+  <mat-button-toggle value="dark"><mat-icon>dark_mode</mat-icon> </mat-button-toggle>
+</mat-button-toggle-group>
+</nav>
+
+<main class="centered-content">
+
+    <mat-form-field class="example-chip-list">
+      <mat-label>Interessi</mat-label>
+      <mat-chip-grid #chipGrid>
+        <mat-chip-row *ngFor="let i of interessi" (removed)="remove(i)">
+          {{i}}
+          <button matChipRemove [attr.aria-label]="'remove ' + i">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip-row>
+      </mat-chip-grid>
+      <input placeholder="Nuovo Interesse..." #fruitInput [formControl]="interessiCtrl" [matChipInputFor]="chipGrid"
+        [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)" />
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let interesse of interesseFiltrato | async" [value]="interesse">
+          {{interesse}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>    
+    
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <input matInput value="Disco party!" #message>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Action</mat-label>
+      <input matInput value="Dance" #action>
+    </mat-form-field>
+    <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+    
+</main>
+<!--
+  
+
+
+
+
+
+  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+  -->

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <h1>Lista Prodotti</h1>
+        <div class="col-10 offset-1">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Descrizione</th>
+                        <th>Giacenza</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prodotto of prodotti">
+                        <td>{{ prodotto.id }}</td>
+                        <td>{{ prodotto.nome }}</td>
+                        <td>{{ prodotto.descrizione }}</td>
+                        <td>{{ prodotto.giacenza }}</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-wrench-adjustable-circle-fill" viewBox="0 0 16 16" type="button"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openEditModal(prodotto)">
+                                <path
+                                    d="M6.705 8.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m-6.202-4.751 1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2a7.03 7.03 0 0 1-2.949-2.951M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red"
+                                class="bi bi-trash3-fill" viewBox="0 0 16 16" (click)="deleteProdotto(prodotto.id)">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-6 offset-3">
+            <form [formGroup]="prodottoForm" (ngSubmit)="addProdotto(prodottoForm.value)">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" formControlName="nome" placeholder="Nome prodotto">
+                </div>
+                <div class="form-group mt-2">
+                    <label>Descrizione:</label>
+                    <input type="text" class="form-control" formControlName="descrizione" placeholder="Descrizione">
+                </div>
+                <div class="form-group mt-2">
+                    <label>Giacenza:</label>
+                    <input type="number" class="form-control" formControlName="giacenza">
+                </div>
+                <button class="btn btn-success mt-3" type="submit" [disabled]="prodottoForm.invalid">Aggiungi</button>
+            </form>
+        </div>
+    </div>
+
+</div>

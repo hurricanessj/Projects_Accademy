@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-4 border rounded shadow-sm bg-light">
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Titolo</mat-label>
+    <input matInput placeholder="Inserisci il titolo" formControlName="titolo" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Descrizione</mat-label>
+    <textarea matInput rows="3" placeholder="Inserisci la descrizione" formControlName="descrizione" required></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-100 mb-4">
+    <mat-label>Stato</mat-label>
+    <mat-select formControlName="stato" required>
+      <mat-option value="in_corso">In corso</mat-option>
+      <mat-option value="completato">Completato</mat-option>
+      <mat-option value="in_attesa">In attesa</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="d-flex justify-content-end gap-2">
+    <button mat-raised-button color="primary" type="submit">
+      {{ form.value.id ? 'Aggiorna' : 'Aggiungi' }} Task
+    </button>
+
+    <button *ngIf="form.value.id" mat-button color="warn" type="button" (click)="resetForm()">
+      Annulla
+    </button>
+  </div>
+</form>

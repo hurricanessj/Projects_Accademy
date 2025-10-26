@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "ruolo": "admin"
+    },
+    {
+      "id": "2",
+      "nome": "Mario",
+      "email": "mario.rossi@example.com",
+      "password": "mario123",
+      "ruolo": "user"
+    },
+    {
+      "id": "3",
+      "nome": "Laura",
+      "email": "laura.bianchi@example.com",
+      "password": "laura123",
+      "ruolo": "user"
+    },
+    {
+      "id": "4",
+      "nome": "Giovanni",
+      "email": "giovanni.verdi@example.com",
+      "password": "giovanni123",
+      "ruolo": "user"
+    },
+    {
+      "id": "5",
+      "nome": "Sofia",
+      "email": "sofia.neri@example.com",
+      "password": "sofia123",
+      "ruolo": "user"
+    },
+    {
+      "id": "cd33",
+      "nome": "Francesco",
+      "email": "frankmarrone04@gmail.com",
+      "password": "Franci2004",
+      "ruolo": "user"
+    },
+    {
+      "id": "ee23",
+      "nome": "Gennaro",
+      "email": "dipi@mail.it",
+      "password": "gennaro",
+      "ruolo": "user"
+    }
+  ],
+  "projects": [
+    {
+      "id": "2",
+      "titolo": "App Mobile",
+      "descrizione": "Creazione di un'app mobile avanzata per la gestione completa delle attività quotidiane, includendo funzioni di pianificazione, notifiche personalizzate, sincronizzazione multi-dispositivo e un'interfaccia intuitiva per migliorare la produttività degli utenti.",
+      "deadline": "2025-09-15"
+    },
+    {
+      "id": "6",
+      "titolo": "Sistema di Autenticazione",
+      "descrizione": "Implementazione di un sistema di login sicuro e gestione dettagliata dei permessi utenti, comprensivo di autenticazione a più fattori, gestione token JWT e controllo granulare dei ruoli per garantire elevati standard di sicurezza e accessibilità.",
+      "deadline": "2025-08-25"
+    },
+    {
+      "id": "7",
+      "titolo": "E-Commerce Platform",
+      "descrizione": "Sviluppo di una piattaforma e-commerce completa per la vendita online, con funzionalità di gestione ordini, catalogo prodotti dinamico, integrazione con sistemi di pagamento e un sistema di tracking spedizioni per offrire un'esperienza utente fluida e sicura.",
+      "deadline": "2025-09-05"
+    },
+    {
+      "id": "8",
+      "titolo": "Documentazione Tecnica",
+      "descrizione": "Redazione dettagliata della documentazione tecnica per le API, inclusa guida utente, esempi di integrazione, best practices e troubleshooting, al fine di facilitare l'adozione e l'uso corretto delle funzionalità da parte degli sviluppatori esterni.",
+      "deadline": "2025-07-20"
+    },
+    {
+      "id": "9",
+      "titolo": "Chat in Tempo Reale",
+      "descrizione": "Sviluppo di una funzionalità di messaggistica in tempo reale tra utenti utilizzando WebSocket, con supporto per chat di gruppo, notifiche push, gestione della presenza e conservazione sicura dei messaggi per garantire una comunicazione efficace e continua.",
+      "deadline": "2025-08-30"
+    },
+    {
+      "id": "10",
+      "titolo": "SEO Ottimizzazione",
+      "descrizione": "Miglioramento del posizionamento del sito web nei motori di ricerca attraverso strategie SEO avanzate, ottimizzazione dei contenuti, miglioramento della struttura tecnica e implementazione di analisi continue per aumentare il traffico organico e la visibilità online.",
+      "deadline": "2025-09-10"
+    },
+    {
+      "id": "11",
+      "titolo": "Sistema di Notifiche",
+      "descrizione": "Implementazione di un sistema completo di notifiche push e via email per aumentare l'engagement degli utenti, con personalizzazione dei messaggi, gestione delle preferenze e integrazione con i principali canali di comunicazione per garantire tempestività e rilevanza.",
+      "deadline": "2025-08-05"
+    },
+    {
+      "id": "12",
+      "titolo": "Gestione Inventario",
+      "descrizione": "Realizzazione di un sistema di controllo inventario con funzionalità di monitoraggio delle scorte, report dettagliati sulle movimentazioni di magazzino e integrazione con sistemi ERP, per ottimizzare la gestione delle risorse e ridurre gli sprechi aziendali.",
+      "deadline": "2025-10-15"
+    }
+  ]
+}

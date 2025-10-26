@@ -1,0 +1,14 @@
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\bin\Debug\net9.0\esempioStruct.exe
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\bin\Debug\net9.0\esempioStruct.deps.json
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\bin\Debug\net9.0\esempioStruct.runtimeconfig.json
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\bin\Debug\net9.0\esempioStruct.dll
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\bin\Debug\net9.0\esempioStruct.pdb
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.AssemblyInfoInputs.cache
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.AssemblyInfo.cs
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.csproj.CoreCompileInputs.cache
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.dll
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\refint\esempioStruct.dll
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.pdb
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\esempioStruct.genruntimeconfig.cache
+C:\Users\ACADEMY004\Desktop\esC#\esempioStruct\obj\Debug\net9.0\ref\esempioStruct.dll

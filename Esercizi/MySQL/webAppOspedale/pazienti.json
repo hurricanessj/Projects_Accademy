@@ -1,0 +1,322 @@
+[
+  {
+    "codice_fiscale": "CFS00001XYZ",
+    "nome": "Nome1",
+    "cognome": "Cognome1",
+    "data_nascita": "1996-07-26",
+    "indirizzo": "Via Fittizia 1, Città1",
+    "visite_mediche": [
+      {
+        "id": "VM001",
+        "cod_medico": "R001",
+        "data": "2015-03-17",
+        "diagnosi": "Diagnosi1",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00002XYZ",
+    "nome": "Nome2",
+    "cognome": "Cognome2",
+    "data_nascita": "1985-04-03",
+    "indirizzo": "Via Fittizia 2, Città2",
+    "visite_mediche": [
+      {
+        "id": "VM002",
+        "cod_medico": "R001",
+        "data": "2019-09-23",
+        "diagnosi": "Diagnosi2",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00003XYZ",
+    "nome": "Nome3",
+    "cognome": "Cognome3",
+    "data_nascita": "1957-04-01",
+    "indirizzo": "Via Fittizia 3, Città3",
+    "visite_mediche": [
+      {
+        "id": "VM003",
+        "cod_medico": "R002",
+        "data": "2019-01-25",
+        "diagnosi": "Diagnosi3",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00004XYZ",
+    "nome": "Nome4",
+    "cognome": "Cognome4",
+    "data_nascita": "1960-06-23",
+    "indirizzo": "Via Fittizia 4, Città4",
+    "visite_mediche": [
+      {
+        "id": "VM004",
+        "cod_medico": "R002",
+        "data": "2021-06-25",
+        "diagnosi": "Diagnosi4",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00005XYZ",
+    "nome": "Nome5",
+    "cognome": "Cognome5",
+    "data_nascita": "1987-06-02",
+    "indirizzo": "Via Fittizia 5, Città5",
+    "visite_mediche": [
+      {
+        "id": "VM005",
+        "cod_medico": "R002",
+        "data": "2023-08-05",
+        "diagnosi": "Diagnosi5",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00006XYZ",
+    "nome": "Nome6",
+    "cognome": "Cognome6",
+    "data_nascita": "1965-08-08",
+    "indirizzo": "Via Fittizia 6, Città6",
+    "visite_mediche": [
+      {
+        "id": "VM006",
+        "cod_medico": "R003",
+        "data": "2021-05-15",
+        "diagnosi": "Diagnosi6",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00007XYZ",
+    "nome": "Nome7",
+    "cognome": "Cognome7",
+    "data_nascita": "1954-09-13",
+    "indirizzo": "Via Fittizia 7, Città7",
+    "visite_mediche": [
+      {
+        "id": "VM007",
+        "cod_medico": "R003",
+        "data": "2020-04-22",
+        "diagnosi": "Diagnosi7",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00008XYZ",
+    "nome": "Nome8",
+    "cognome": "Cognome8",
+    "data_nascita": "1964-09-30",
+    "indirizzo": "Via Fittizia 8, Città8",
+    "visite_mediche": [
+      {
+        "id": "VM008",
+        "cod_medico": "R003",
+        "data": "2019-04-26",
+        "diagnosi": "Diagnosi8",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00009XYZ",
+    "nome": "Nome9",
+    "cognome": "Cognome9",
+    "data_nascita": "1957-02-24",
+    "indirizzo": "Via Fittizia 9, Città9",
+    "visite_mediche": [
+      {
+        "id": "VM009",
+        "cod_medico": "R004",
+        "data": "2016-01-30",
+        "diagnosi": "Diagnosi9",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00010XYZ",
+    "nome": "Nome10",
+    "cognome": "Cognome10",
+    "data_nascita": "1958-08-30",
+    "indirizzo": "Via Fittizia 10, Città10",
+    "visite_mediche": [
+      {
+        "id": "VM010",
+        "cod_medico": "R004",
+        "data": "2023-05-23",
+        "diagnosi": "Diagnosi10",
+        "esito": "Positivo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00011XYZ",
+    "nome": "Nome11",
+    "cognome": "Cognome11",
+    "data_nascita": "1952-03-10",
+    "indirizzo": "Via Fittizia 11, Città11",
+    "visite_mediche": [
+      {
+        "id": "VM011",
+        "cod_medico": "R004",
+        "data": "2017-04-24",
+        "diagnosi": "Diagnosi11",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00012XYZ",
+    "nome": "Nome12",
+    "cognome": "Cognome12",
+    "data_nascita": "2002-06-03",
+    "indirizzo": "Via Fittizia 12, Città12",
+    "visite_mediche": [
+      {
+        "id": "VM012",
+        "cod_medico": "R004",
+        "data": "2023-09-10",
+        "diagnosi": "Diagnosi12",
+        "esito": "Positivo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00013XYZ",
+    "nome": "Nome13",
+    "cognome": "Cognome13",
+    "data_nascita": "1985-02-16",
+    "indirizzo": "Via Fittizia 13, Città13",
+    "visite_mediche": [
+      {
+        "id": "VM013",
+        "cod_medico": "R005",
+        "data": "2021-08-11",
+        "diagnosi": "Diagnosi13",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00014XYZ",
+    "nome": "Nome14",
+    "cognome": "Cognome14",
+    "data_nascita": "1989-06-12",
+    "indirizzo": "Via Fittizia 14, Città14",
+    "visite_mediche": [
+      {
+        "id": "VM014",
+        "cod_medico": "R005",
+        "data": "2022-01-29",
+        "diagnosi": "Diagnosi14",
+        "esito": "Positivo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00015XYZ",
+    "nome": "Nome15",
+    "cognome": "Cognome15",
+    "data_nascita": "1952-09-25",
+    "indirizzo": "Via Fittizia 15, Città15",
+    "visite_mediche": [
+      {
+        "id": "VM015",
+        "cod_medico": "R005",
+        "data": "2021-10-17",
+        "diagnosi": "Diagnosi15",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00016XYZ",
+    "nome": "Nome16",
+    "cognome": "Cognome16",
+    "data_nascita": "1964-11-05",
+    "indirizzo": "Via Fittizia 16, Città16",
+    "visite_mediche": [
+      {
+        "id": "VM016",
+        "cod_medico": "R005",
+        "data": "2020-12-23",
+        "diagnosi": "Diagnosi16",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00017XYZ",
+    "nome": "Nome17",
+    "cognome": "Cognome17",
+    "data_nascita": "1990-07-25",
+    "indirizzo": "Via Fittizia 17, Città17",
+    "visite_mediche": [
+      {
+        "id": "VM017",
+        "cod_medico": "R005",
+        "data": "2021-03-26",
+        "diagnosi": "Diagnosi17",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00018XYZ",
+    "nome": "Nome18",
+    "cognome": "Cognome18",
+    "data_nascita": "1999-08-26",
+    "indirizzo": "Via Fittizia 18, Città18",
+    "visite_mediche": [
+      {
+        "id": "VM018",
+        "cod_medico": "R006",
+        "data": "2023-12-06",
+        "diagnosi": "Diagnosi18",
+        "esito": "Negativo"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00019XYZ",
+    "nome": "Nome19",
+    "cognome": "Cognome19",
+    "data_nascita": "1998-11-13",
+    "indirizzo": "Via Fittizia 19, Città19",
+    "visite_mediche": [
+      {
+        "id": "VM019",
+        "cod_medico": "R006",
+        "data": "2020-04-16",
+        "diagnosi": "Diagnosi19",
+        "esito": "In osservazione"
+      }
+    ]
+  },
+  {
+    "codice_fiscale": "CFS00020XYZ",
+    "nome": "Nome20",
+    "cognome": "Cognome20",
+    "data_nascita": "2001-03-06",
+    "indirizzo": "Via Fittizia 20, Città20",
+    "visite_mediche": [
+      {
+        "id": "VM020",
+        "cod_medico": "R006",
+        "data": "2019-06-06",
+        "diagnosi": "Diagnosi20",
+        "esito": "Positivo"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+<div class="container py-5">
+
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Gallery</h1>
+    <p class="text-muted">Uno sguardo ai nostri eventi, lavori e momenti importanti.</p>
+  </div>
+
+<div class="row g-3 justify-content-center">
+  <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let img of immagini">
+    <a [routerLink]="['/dettagli', img.id]" class="text-decoration-none">
+      <div class="card border-0 shadow-sm shadow-lg p-3 mb-5 bg-body rounded">
+        <img [src]="img.src" class="card-img-top rounded" alt="{{ img.titolo }}">
+        <div class="card-body text-center">
+          <h6 class="card-title text-dark">{{ img.titolo }}</h6>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<h2>utenti</h2>
+<ul>
+    <li *ngFor="let u of utenti">
+        {{u.nome}}
+        {{u.cognome}},
+        {{u.eta}}<br>
+        {{u.dataNascita}}<br>
+        {{u.indirizzo}}<br>
+        {{u.telefono}}
+        {{u.email}}<br><br>
+        <button (click)="updateUtente(u)">modifica</button>
+        <button (click)="deleteUser(u.id)">Elimina</button>
+    </li>
+</ul>
+
+<form #formUtente="ngForm" (ngSubmit)="addUser(formUtente.value)">
+    <label>Nome:</label>
+    <input #nome [(ngModel)]="currentUser.nome" type="text" name="nome"required minlength="3">
+    <div *ngIf="nome.value.length < 3">
+        inserisci almeno 3 caratteri
+    </div>
+    <label>Cognome:</label>
+    <input #cognome [(ngModel)]="currentUser.cognome" type="text" name="cognome" ngModel required minlength="3">
+    <div *ngIf="cognome.value.length < 3">
+        inserisci almeno 3 caratteri
+    </div>
+    <label>Eta:</label>
+    <input #eta [(ngModel)]="currentUser.eta" type="number" name="eta" ngModel required>
+    <label>Data Nascita:</label>
+    <input #nascita [(ngModel)]="currentUser.dataNascita" type="date" name="dataNascita" ngModel required>
+    <label>Indirizzo:</label>
+    <input #indirizzo [(ngModel)]="currentUser.indirizzo" type="email" name="indirizzo" ngModel required>
+    <label>Telefono:</label>
+    <input #telefono [(ngModel)]="currentUser.telefono" type="text" name="telefono" ngModel required>
+    <label>Email:</label>
+    <input #mail [(ngModel)]="currentUser.email" type="email" name="email" ngModel required email>
+    <button type="submit" >invia</button>
+</form>

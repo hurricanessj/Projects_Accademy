@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione Fruttivendolo</title>
+    <style>
+ 
+body {
+    background: linear-gradient(135deg, #a0ffe6, #f1f7ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+ 
+h1, h2 {
+    text-align: center;
+    color: #0b7d6a;
+    margin-bottom: 20px;
+}
+ 
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+input[type="text"], select {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #0b7d6a;
+    border-radius: 8px;
+    font-size: 16px;
+}
+ 
+button {
+    width: 48%;
+    padding: 12px;
+    margin: 1%;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #0b7d6a;
+    color: white;
+    transition: background-color 0.3s;
+}
+ 
+button:hover {
+    background-color: #0da98b;
+}
+ 
+ 
+img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+ 
+    </style>
+</head>
+<body>
+    <h1>Gestione Prodotti Fruttivendolo</h1>
+    <h2>Aggiungi al tuo carrello la frutta!</h2>
+ 
+    <form id="formDiAggiunta">
+        <input type="text" id="nome" placeholder="Il Tuo Nome" required>
+ 
+        <select id="fruttaSelezionata">
+            <option value="">-- Seleziona Frutto --</option>
+        </select>
+ 
+        <button type="button" onclick="addFrutta()">Aggiungi Al Carrello</button>
+        <button type="button" onclick="mostraTuttiProdotti()">Visualizza Carrelli</button>
+        <button type="button" onclick="svuotaCarrello()">Rimuovi Carrelli</button>
+    </form>
+ 
+            <img src="imgBanana.jpg">
+            <img src="imgMela.jpg">
+            <img src="imgPera.jpg">
+            <img src="imgAnanas.jpg">
+    <script>
+        const fruttaJson = [
+            { nome: "banana", prezzo: "1", immagine: "imgBanana.jpg" },
+            { nome: "mela", prezzo: "1", immagine: "imgMela.jpg" },
+            { nome: "pera", prezzo: "1", immagine: "imgPera.jpg" },
+            { nome: "ananas", prezzo: "1", immagine: "imgAnanas.jpg" },
+        ];
+ 
+        const listaFrutta = document.getElementById("fruttaSelezionata");
+ 
+        fruttaJson.forEach(frutto => {
+            listaFrutta.innerHTML += `<option value="${frutto.nome}">${frutto.nome}</option>`;
+        });
+ 
+        function addFrutta() {
+            const nomeUtente = document.getElementById("nome").value;
+            const nomeFrutto = document.getElementById("fruttaSelezionata").value;
+ 
+            if (!nomeUtente || !nomeFrutto) {
+                alert("Compila tutti i campi!");
+                return;
+            }
+ 
+            const fruttoSelezionato = fruttaJson.find(frutto => frutto.nome === nomeFrutto);
+ 
+            const nuovoCarrello = {
+                nome: nomeUtente,
+                frutto: fruttoSelezionato.nome,
+                prezzo: fruttoSelezionato.prezzo,
+                immagine: fruttoSelezionato.immagine
+            };
+ 
+            const carrelli = JSON.parse(localStorage.getItem("carrelloString")) || [];
+ 
+            carrelli.push(nuovoCarrello);
+ 
+            localStorage.setItem("carrelloString", JSON.stringify(carrelli));
+           
+ 
+            console.log(JSON.stringify(carrelli))
+ 
+            document.getElementById("formDiAggiunta").reset();
+        }
+ 
+        function mostraTuttiProdotti() {
+            window.location.href = "visualizzaFrutta.html";
+        }
+ 
+        function svuotaCarrello() {
+            localStorage.removeItem("carrelloString");
+            alert("Carrello svuotato!");
+        }
+    </script>
+ 
+</body>
+</html>

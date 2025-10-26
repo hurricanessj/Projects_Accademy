@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="mt-4">
+            <form [formGroup]="form">
+                <input matInput placeholder="pat@example.com" formControlName="email" required />
+                <button type="submit" mat-raised-button color="primary" (click)="changeStatus(true)">
+                login   <mat-icon>login</mat-icon>
+                </button>
+                <button type="button" mat-raised-button color="warn" (click)="changeStatus(false)" >
+                logout   <mat-icon>logout</mat-icon>
+                </button>
+                
+            </form>
+        </div>
+    </div>
+</div>

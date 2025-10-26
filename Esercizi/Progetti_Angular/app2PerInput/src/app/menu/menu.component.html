@@ -1,0 +1,11 @@
+<h2>Menù Progetti</h2>
+
+<ul>
+  <li *ngFor="let progetto of progetti">
+    <button (click)="selezionaProgetto(progetto)">
+      {{ progetto.nome }}
+    </button>
+  </li>
+</ul>
+
+<app-progetti *ngIf="progettoSelezionato" [progetto]="progettoSelezionato"> </app-progetti>

@@ -1,0 +1,14 @@
+<!--
+<app-saluti [nomeSaluto] = "'Gaetano'"></app-saluti>
+<app-componente-con-output (evento) = "alertEvento($event)"></app-componente-con-output>
+<app-componente-figlio-saluta [salutoFiglio]="'NomeFiglio'"></app-componente-figlio-saluta>
+<app-array-colori></app-array-colori>
+
+
+esercizio Padre Figlio
+<button (click)="inviaNome()">Invia nome al figlio</button>
+<app-figlio [nome]="nome"></app-figlio>
+-->
+
+<!--array colori-->
+<app-array-colori [colori]="colori" (evento)="mostraColore($event)"></app-array-colori>

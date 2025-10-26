@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "titolo": "Creare struttura del progetto",
+      "descrizione": "Inizializzare il progetto Angular e configurare il routing",
+      "stato": "completata"
+    },
+    {
+      "id": "2",
+      "titolo": "Implementare interfaccia Task",
+      "descrizione": "Definire l’interfaccia TypeScript per le task",
+      "stato": "completata"
+    },
+    {
+      "id": "3",
+      "titolo": "Creare servizio TaskService",
+      "descrizione": "Servizio per gestire operazioni CRUD sulle task",
+      "stato": "in corso"
+    },
+    {
+      "id": "4",
+      "titolo": "Realizzare componente TaskList",
+      "descrizione": "Visualizzare l’elenco delle task con possibilità di filtro",
+      "stato": "in sospeso"
+    },
+    {
+      "id": "5",
+      "titolo": "Aggiungere funzionalità di completamento",
+      "descrizione": "Permettere all’utente di marcare una task come completata",
+      "stato": "in sospeso"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<h1>Seleziona il prodotto</h1>
+ 
+<select [(ngModel)]="prodottoSelezionato" (change)="popolaFattoria()">
+    <option [ngValue]="p.id"  *ngFor="let p of ListaProdotti">{{p.nome}}</option>
+</select>
+ 
+<select [(ngModel)]="fattoriaSelezionata" (change)="popolaSediSelect()">
+  <option [ngValue]="f.id" *ngFor="let f of fattoriaFiltrata">{{f.nome}}</option>
+</select>
+
+<select [(ngModel)]="sedeSelezionata" (change)="visualizzaDettagli()">
+    <option [ngValue]="s.id" *ngFor="let s of sedeFiltrata">{{s.citta}}</option>
+</select>
+
+<ul>
+    <li>{{sedeVisualizza?.citta}} - {{sedeVisualizza?.fatturato}}</li>
+</ul>

@@ -1,0 +1,5 @@
+<h2>Lista animali</h2>
+<div *ngFor="let animale of listaAnimali">
+  <app-animale-card [animale]="animale" (versoEmesso)="riceviVerso($event)">
+  </app-animale-card>
+</div>

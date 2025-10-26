@@ -1,0 +1,19 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+    <label for="nome">Nome:</label>
+    <input type="text" formControlName="nome">
+    <div>
+        <p *ngIf="form.get('nome')?.invalid">il nome è obbligatorio</p>
+    </div>
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email">
+    <div>
+        <p *ngIf="form.get('email')?.invalid">email è obbligatorio</p>
+    </div>
+    <button type="submit" [disabled]="form.invalid">invia</button>
+</form>
+<app-iscrizione #iscriviti></app-iscrizione>
+
+<div>
+    <p>{{iscriviti.quotaIscrizione}}</p>
+    <h3>{{iscriviti.getQuotaAnnuale()}}</h3>
+</div>

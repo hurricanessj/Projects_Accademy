@@ -1,0 +1,6 @@
+<!--<app-book-list></app-book-list>
+<app-figlio #childRef></app-figlio>
+-->
+<app-figlio #childRef [nomi]="nomiPadre"></app-figlio>
+<button (click)="childRef.sayHello()">cliaccami</button>
+<p>{{childRef.title}}</p>

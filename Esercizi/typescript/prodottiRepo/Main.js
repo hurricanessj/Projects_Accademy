@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Repository_1 = require("./Repository");
+var productRepository = new Repository_1.Repository();
+productRepository.add({ id: 1, name: "Laptop", price: 1200 });
+productRepository.add({ id: 2, name: "Mouse", price: 25 });
+productRepository.add({ id: 3, name: "Tastiera", price: 45 });
+console.log("Lista iniziale dei prodotti:\n", productRepository.getAll());
+var product = productRepository.getById(2);
+console.log("\nProdotto con ID 2:\n", product);
+productRepository.removeById(1);
+console.log("\nLista aggiornata dei prodotti:", productRepository.getAll());

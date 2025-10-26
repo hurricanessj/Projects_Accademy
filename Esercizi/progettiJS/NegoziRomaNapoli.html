@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Seconda Pagina</h2>
+    <table>
+        <thead>
+            
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+</body>
+<script>
+    var citta = localStorage.getItem("citta");
+    console.log(citta);
+
+    var arrayNegoziNapoli = ["alcott", "gutteridge", "footloker", "awlab"];
+    var arrayNegoziRoma = ["primark", "zara", "pull&bear", "berska"];
+
+    function visualizzaNegozio(){
+        if(citta == "napoli"){
+            for(var i=0; i<arrayNegoziNapoli.length; i++){
+                console.log(arrayNegoziNapoli[i])
+            }
+        }else if(citta == "roma"){
+            for(var i=0; i<arrayNegoziRoma.length; i++){
+                console.log(arrayNegoziRoma[i])
+            }
+        }else{
+            console.log("citta non valida")
+        }
+    }
+
+    console.log(visualizzaNegozio());
+
+</script>
+
+</html>

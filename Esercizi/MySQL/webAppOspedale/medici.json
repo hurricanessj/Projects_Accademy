@@ -1,0 +1,222 @@
+[
+  {
+    "codice_fiscale": "CFM00001ABC",
+    "nome": "MedicoNome1",
+    "cognome": "MedicoCognome1",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R001",
+      "nome": "Reparto1",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00002ABC",
+    "nome": "MedicoNome2",
+    "cognome": "MedicoCognome2",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R002",
+      "nome": "Reparto2",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00003ABC",
+    "nome": "MedicoNome3",
+    "cognome": "MedicoCognome3",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R003",
+      "nome": "Reparto3",
+      "piano": 1
+    }
+  },
+  {
+    "codice_fiscale": "CFM00004ABC",
+    "nome": "MedicoNome4",
+    "cognome": "MedicoCognome4",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R004",
+      "nome": "Reparto4",
+      "piano": 3
+    }
+  },
+  {
+    "codice_fiscale": "CFM00005ABC",
+    "nome": "MedicoNome5",
+    "cognome": "MedicoCognome5",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R005",
+      "nome": "Reparto5",
+      "piano": 1
+    }
+  },
+  {
+    "codice_fiscale": "CFM00006ABC",
+    "nome": "MedicoNome6",
+    "cognome": "MedicoCognome6",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R006",
+      "nome": "Reparto6",
+      "piano": 5
+    }
+  },
+  {
+    "codice_fiscale": "CFM00007ABC",
+    "nome": "MedicoNome7",
+    "cognome": "MedicoCognome7",
+    "specializzazione": "Cardiologia",
+    "reparto": {
+      "codice": "R007",
+      "nome": "Reparto7",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00008ABC",
+    "nome": "MedicoNome8",
+    "cognome": "MedicoCognome8",
+    "specializzazione": "Pediatria",
+    "reparto": {
+      "codice": "R008",
+      "nome": "Reparto8",
+      "piano": 5
+    }
+  },
+  {
+    "codice_fiscale": "CFM00009ABC",
+    "nome": "MedicoNome9",
+    "cognome": "MedicoCognome9",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R009",
+      "nome": "Reparto9",
+      "piano": 5
+    }
+  },
+  {
+    "codice_fiscale": "CFM00010ABC",
+    "nome": "MedicoNome10",
+    "cognome": "MedicoCognome10",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R010",
+      "nome": "Reparto10",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00011ABC",
+    "nome": "MedicoNome11",
+    "cognome": "MedicoCognome11",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R011",
+      "nome": "Reparto11",
+      "piano": 5
+    }
+  },
+  {
+    "codice_fiscale": "CFM00012ABC",
+    "nome": "MedicoNome12",
+    "cognome": "MedicoCognome12",
+    "specializzazione": "Neurologia",
+    "reparto": {
+      "codice": "R012",
+      "nome": "Reparto12",
+      "piano": 3
+    }
+  },
+  {
+    "codice_fiscale": "CFM00013ABC",
+    "nome": "MedicoNome13",
+    "cognome": "MedicoCognome13",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R013",
+      "nome": "Reparto13",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00014ABC",
+    "nome": "MedicoNome14",
+    "cognome": "MedicoCognome14",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R014",
+      "nome": "Reparto14",
+      "piano": 3
+    }
+  },
+  {
+    "codice_fiscale": "CFM00015ABC",
+    "nome": "MedicoNome15",
+    "cognome": "MedicoCognome15",
+    "specializzazione": "Pediatria",
+    "reparto": {
+      "codice": "R015",
+      "nome": "Reparto15",
+      "piano": 3
+    }
+  },
+  {
+    "codice_fiscale": "CFM00016ABC",
+    "nome": "MedicoNome16",
+    "cognome": "MedicoCognome16",
+    "specializzazione": "Cardiologia",
+    "reparto": {
+      "codice": "R015",
+      "nome": "Reparto16",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00017ABC",
+    "nome": "MedicoNome17",
+    "cognome": "MedicoCognome17",
+    "specializzazione": "Cardiologia",
+    "reparto": {
+      "codice": "R017",
+      "nome": "Reparto17",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00018ABC",
+    "nome": "MedicoNome18",
+    "cognome": "MedicoCognome18",
+    "specializzazione": "Pediatria",
+    "reparto": {
+      "codice": "R018",
+      "nome": "Reparto18",
+      "piano": 3
+    }
+  },
+  {
+    "codice_fiscale": "CFM00019ABC",
+    "nome": "MedicoNome19",
+    "cognome": "MedicoCognome19",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R019",
+      "nome": "Reparto19",
+      "piano": 2
+    }
+  },
+  {
+    "codice_fiscale": "CFM00020ABC",
+    "nome": "MedicoNome20",
+    "cognome": "MedicoCognome20",
+    "specializzazione": "Ortopedia",
+    "reparto": {
+      "codice": "R020",
+      "nome": "Reparto20",
+      "piano": 3
+    }
+  }
+]

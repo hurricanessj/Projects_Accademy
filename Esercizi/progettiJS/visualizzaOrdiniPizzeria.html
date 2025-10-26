@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordini</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Cognome
+                </th>
+                <th>
+                    Pizza
+                </th>
+                <th>
+                    Bibita
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Ordini totali</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        var stringaJSON = localStorage.getItem("stringaJson");
+
+        var listaOrdini = JSON.parse(stringaJSON);
+        console.log(listaOrdini);
+
+        var visualizzaOrdini = document.getElementById("listaOrdini");
+        listaOrdini.forEach(elem => {
+            table.innerHTML += `<tr><td>${elem.nome}</td><td>${elem.cognome}</td><td>${elem.pizza}</td><td>${elem.bibita}</td></tr>`
+        })
+
+    </script>
+</body>
+
+</html>

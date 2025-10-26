@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+        <div class="col" *ngFor="let product of products" [routerLink]="['/dettagli', product.id]"
+
+            style="cursor: pointer;">
+            <div class="card h-100" >
+                <img [src]="product.image" class="card-img-top" alt="{{ product.title }}"
+                    style="object-fit: cover; height: 200px;" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text text-muted">{{ product.price | currency }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

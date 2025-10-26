@@ -1,0 +1,36 @@
+<!DOCTYPE html><!--data la riga nome e cognome utilizzando split e spred ricavate le vostre iniziali-->
+<html lang="it">
+<!--data una stringa 1 2 3 4 5 6 creare un array di numeri non caratteri
+                    dati due array il primo ha valori 1 2 3 4 il secondo 5 6 7 8 voglio ottenere un array di numeri da 0 a 8 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const stringaNomeCognome = "Gaetano Esposito";
+        const [nome, cognome] = stringaNomeCognome.split(" ");
+        var [inN, ...y] = nome;
+        var [inC, ...y] = cognome;
+        console.log(inN + inC);
+
+        console.log("----------------");
+
+        var stringaNumeri = "123456";
+        stringaNumeri.split("");
+        console.log(Number(stringaNumeri));
+
+        console.log("---------------");
+
+        //esercizio 3
+        const primoArray = [1, 2, 3, 4];
+        const arrayConcat = [0,...primoArray, ...[5, 6, 7],8];
+        console.log(arrayConcat);
+    </script>
+</body>
+
+</html>

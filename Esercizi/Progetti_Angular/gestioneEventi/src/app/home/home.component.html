@@ -1,0 +1,50 @@
+<div class="projects-container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let off of offertaList">
+      <div class="card project-card shadow-sm h-100">
+        <div class="card-body d-flex flex-column">
+          
+          <h4 class="card-title text-success">
+            {{ off.titolo }}
+          </h4>
+
+          <h6 class="card-subtitle text-muted mb-2">
+            {{ off.azienda }}
+          </h6>
+
+          <p class="card-text mb-3">
+            {{ off.descrizione }}
+          </p>
+
+          <p class="card-text small">
+            <strong>Pubblicata il:</strong> {{ off.dataPubblicazione }}
+          </p>
+
+          <p class="card-text small">
+            <strong>Stato:</strong>
+            <span [ngClass]="{
+              'text-success': off.stato == 'APERTA',
+              'text-danger': off.stato == 'CHIUSA'
+            }">
+              {{ off.stato }}
+            </span>
+          </p>
+
+          <p class="card-text small" *ngIf="off.candidature">
+            <strong>Candidature ricevute:</strong> {{ off.candidature.length }}
+          </p>
+
+          <div *ngIf="authService.getRole() == 'admin'" class="mt-auto d-flex gap-2 pt-3">
+            <button class="btn btn-outline-success btn-sm" (click)="editOff(off)">
+              Modifica
+            </button>
+            <button class="btn btn-outline-danger btn-sm" (click)="deleteOff(off.id)">
+              Elimina
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
